@@ -1,33 +1,27 @@
 <template>
     <div id="app">
         <Header />
-        <Banner />
-        <Intro />
-        <!-- <one /> -->
-        <!-- <SectionPhoto /> -->
+        <Banner2 />
+        <!-- <Intro /> -->
+        <Section />
         <faq />
         <Video />
         <News />
-        <!-- <more /> -->
-
         <Addition />
-        <!-- <Bottom /> -->
         <Footer />
     </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import Banner from '@/components/Banner.vue'
-// import one from '@/components/one.vue'
-import Intro from '@/components/Intro.vue'
+import Banner2 from '@/components/banner2.vue'
+// import Banner from '@/components/Banner.vue'
+// import Intro from '@/components/intro.vue'
+import Section from '@/components/section.vue'
 import faq from '@/components/faq.vue'
-// import more from '@/components/more.vue'
-
 import Video from '@/components/Video.vue'
 import News from '@/components/News.vue'
 import Addition from '@/components/Addition.vue'
-// import Bottom from '@/components/Bottom.vue'
 import Footer from '@/components/Footer.vue'
 
 
@@ -35,8 +29,9 @@ export default {
     name: 'App',
     components: {
         Header,
-        Banner,
-        Intro,
+        Banner2,
+        // Intro,
+        Section,
         faq,
         Video,
         News,
