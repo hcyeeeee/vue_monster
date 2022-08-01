@@ -1,12 +1,21 @@
 <template>
     <div class="layout">
-        <picture>
+        <!-- <picture>
             <source srcset="../assets/mobilebanner.png" media="(max-width: 500px)" />
             <source srcset="../assets/mobilebanner.png" media="(max-width: 768px)" />
             <source srcset="../assets/mobilebanner.png" media="(max-width: 1024px)" />
 
-        </picture>
+
+        </picture> -->
+
+        <div class="title">
+            <h2 class="titleh2">台灣民俗月專題</h2>
+            <h3 class="titleh3">台灣鬼怪不只林投姐與魔神仔？揭密台灣本土鬼怪傳說</h3>
+            <p class="titlep">你知道台灣也有自己的鬼怪文化嗎？民視新聞網特別製作台灣民俗月專題，<br>
+                用心理測驗跟專家訪談介紹台灣的本土文化、揭密台灣豐富的妖怪傳說。</p>
+        </div>
         <section class=" bg--main game__wrap layout">
+
             <div class="container py-5">
 
                 <a class="btn2" href="#intro">了解更多</a>
@@ -319,6 +328,39 @@ export default {
 * {
     font-family: "華康愛情體W5";
 }
+
+
+.title {
+    position: absolute;
+    color: #ffffff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.title .titleh2 {
+    top: 5rem;
+    font-size: 70px;
+
+}
+
+.title .titleh3 {
+    top: 5.5rem;
+    font-size: 40px;
+
+}
+
+.title .titlep {
+    top: 6rem;
+
+}
+
+
+
 
 .layout {
     width: 100%;
@@ -810,12 +852,7 @@ strong {
     font-weight: 500;
 }
 
-blockquote {
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 500;
-    margin-bottom: 0;
-}
+
 
 li {
     list-style: none;
@@ -1614,103 +1651,10 @@ label:hover {
     margin: 40px 0;
 }
 
-.links .sqBtn,
-.links .sqBtn span {
-    text-align: center;
-    padding: 15px 0;
-    border-radius: 8px;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-}
 
-.links .sqBtn span {
-    display: block;
-    position: absolute;
-    width: calc(100%);
-    height: calc(100%);
-    left: 0;
-    top: 0;
-    -webkit-clip-path: inset(0 100% 0 0);
-    clip-path: inset(0 100% 0 0);
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
 
-.links .sqBtn--sub {
-    background-color: #2544a1;
-    color: #fff;
-}
 
-.links .sqBtn--sub span {
-    background-color: #373737;
-    color: #fff;
-}
 
-.links .sqBtn--line {
-    background-color: #f3f3f3;
-    color: #2544a1;
-    border: 1px solid #2544a1;
-}
-
-.links .sqBtn--line span {
-    background-color: #373737;
-    border: 1px solid #373737;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    top: -1px;
-    left: -1px;
-    color: #fff;
-}
-
-.share {
-    margin: 20px 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.icon__social {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-image: url(../assets/bear.jpg);
-    margin: 0 10px;
-}
-
-.icon__social--fb {
-    background-position-x: 0;
-}
-
-.icon__social--line {
-    background-position-x: -60px;
-}
-
-.scrolldown {
-    width: 90px;
-    height: 60px;
-    background-image: url(../assets/bear.jpg);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 @media only screen and (min-width: 768px) {
     .links .sqBtn--sub:hover span {
@@ -2083,8 +2027,8 @@ label:hover {
 }
 
 .bg--main {
-    background-image: url("../assets/computerbanner.png");
-    height: 100vh;
+    background-image: url("../assets/banner.jpg");
+    max-height: 100%;
     background-size: cover;
 }
 
@@ -2544,29 +2488,7 @@ label:hover {
         margin-bottom: 30px;
     }
 
-    .slider .arrow__square {
-        top: 25%;
-    }
-
-    .slider .arrow__square--left {
-        left: 20px;
-    }
-
-    .slider .arrow__square--right {
-        right: 20px;
-    }
-
-    .backtop {
-        right: 10px;
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media only screen and (max-width: 414px) {
-    .half__item {
-        max-width: unset;
-    }
+    .slider .arrow__square {}
 }
 
 .row {}

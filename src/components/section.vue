@@ -1,11 +1,11 @@
 <template>
-  <div class="layout" id="intro">
+  <div class="layout" id="section">
     <div class="layout_grid">
 
       <h1>台灣神怪知多少？</h1>
 
     </div>
-    <section class="timeline computer">
+    <section class="timeline computer1">
       <!-- <ol>
         <li v-for="time in times" :key="time" >
           <div v-on:click="modal_1 = !modal_1">
@@ -59,7 +59,7 @@
 
 
 
-    <section class="timeline mobile">
+    <section class="timeline mobile2">
       <div class="container right">
         <div v-on:click="modal_1 = !modal_1">
           <time class="time">康熙24年</time>
@@ -114,6 +114,7 @@
     <div class="c-modal container" v-show="modal_1">
       <!-- computer version -->
       <div class="row computer">
+        <div class="close">+</div>
         <img class="role col-5" src="../assets/37-林投姐.jpg" alt="">
         <div class="row col-7 content">
           <h1>林投姐</h1>
@@ -216,12 +217,13 @@
             <div class="col-6 text"> 台南孔廟、辜婦媽廟</div>
           </div>
           <div class="row">
-            <p class="col-6">一、台南孔廟<br>
+            <p class="col-12">一、台南孔廟<br>
               全台首座孔子廟，一度是全台童生入學之所，號稱「全台首學」，西側為節孝祠、孝子祠。陳守娘過世後，牌位至今仍在節孝祠供奉。
             </p>
-            <p class="col-6">二、辜婦媽廟<br>
-              為祭祀丈夫早逝，仍孝順公婆、將夫婿側室孩子視如己出，並一生守節的辜林氏的廟宇。相傳陳守娘從小在附近生活，耳濡目染之下，成為貞節觀念強烈的女子。
 
+
+            <p class="col-12">二、辜婦媽廟<br>
+              為祭祀丈夫早逝，仍孝順公婆、將夫婿側室孩子視如己出，並一生守節的辜林氏的廟宇。相傳陳守娘從小在附近生活，耳濡目染之下，成為貞節觀念強烈的女子。
             </p>
             <img src="../assets/台南孔廟-googlemap.png" class="col-6 travel" alt="">
             <img src="../assets/辜婦媽廟-官方粉專2.jpeg" class="col-6 travel" alt="">
@@ -593,6 +595,7 @@
 
 </template>
 
+
 <script>
 export default {
   name: 'Intro',
@@ -637,8 +640,10 @@ export default {
     },
     toggleModal() {
       this.$root.$emit('bv::toggle::modal', 'modal-1', '#btnToggle')
-    }
-  }
+    },
+
+
+  },
 }
 </script>
 
@@ -647,12 +652,26 @@ export default {
   font-family: '華康愛情體W5';
 }
 
-.content {
-  padding-left: 3rem;
-
-  padding-right: 0rem;
-
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transform: rotate(45deg);
 }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 .mobile {
   display: none;
@@ -718,8 +737,8 @@ export default {
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-image: url('../assets/底1.png');
-  background-size: 100% 100%;
+  background-image: url('../assets/banner1.jpg');
+
   padding: 0rem 0;
   width: 100%;
   height: 100%;
@@ -788,6 +807,9 @@ picture {
 }
 
 @media screen and (max-width: 500px) {
+
+
+
   .layout_grid img {
     width: 100%;
   }
@@ -829,7 +851,7 @@ button {
 
 .timeline {
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: scroll;
   height: 100%;
   margin-top: -5.5rem;
 
@@ -838,7 +860,7 @@ button {
 .timeline ol {
   margin-top: 8rem;
   font-size: 0;
-  width: 100vw;
+  width: 100%;
   padding: 200px 0;
   transition: all 1s;
 
@@ -869,8 +891,8 @@ button {
   top: 50%;
   left: calc(50% + 1px);
   bottom: 0;
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   transform: translateY(-50%);
   border-radius: 50%;
   background: #e4e4e4;
@@ -879,8 +901,8 @@ button {
 }
 
 .timeline ol li:hover::after {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   transition: 1s;
   background: #e5c523;
 }
@@ -891,7 +913,7 @@ button {
 .timeline ol li div {
   position: absolute;
   left: calc(100% - 12rem);
-  width: 200px;
+  width: 220px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
@@ -960,16 +982,17 @@ h3 {
   font-family: '華康愛情體w5';
 }
 
+.mobile {
+  margin: auto;
+}
+
 
 
 @media screen and (max-width: 1024px) {
-  .computer {
-    display: none;
-  }
 
   .content {
     text-align: center;
-    margin-top: -2rem;
+
   }
 
   h3 {
@@ -996,10 +1019,7 @@ h3 {
 
   .role {
     width: 100% 100%;
-
-
-
-    padding: 2rem 1.5rem 0rem 3rem;
+    /* padding: 2rem 1.5rem 0rem 3rem; */
 
   }
 
@@ -1012,7 +1032,122 @@ h3 {
     display: block;
   }
 
+  .computer {
+    display: none;
+  }
 
+  /* .computer {
+    display: none;
+  } */
+
+
+}
+
+
+
+
+
+/* Add arrows to the left container (pointing right) */
+/* .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+/* .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  */
+
+/* The actual content */
+.content {
+  /* padding: 20px; */
+
+  position: relative;
+  border-radius: 6px;
+
+}
+
+.mobile2 {
+  display: none;
+
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 900px) {
+
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 17px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+    margin-bottom: 5rem;
+  }
+
+  Make sure that all arrows are pointing leftwards .container::before {
+    top: 20px;
+    left: 35px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 8px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 85vw;
+  height: 90vh;
+
+  color: rgb(7, 7, 7);
+
+  border-radius: 5px;
+  background-image: url('../assets/底2.jpg');
+  background-size: 100%;
+  z-index: 10001;
+  opacity: 1;
+  transition: .6s;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 
@@ -1023,7 +1158,14 @@ h3 {
 
   }
 
+  .computer {
+    display: none;
+  }
 
+  .mobile2 {
+    display: block;
+
+  }
 
   h2 {
     margin: 0 0 10px;
@@ -1034,8 +1176,9 @@ h3 {
   .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 1rem auto;
+    /* margin: 1rem auto; */
     cursor: pointer;
+    margin-bottom: 3rem;
   }
 
   /* The actual timeline (the vertical ruler) */
@@ -1046,8 +1189,9 @@ h3 {
     background-color: #FFF;
     top: 0;
     bottom: 0;
-    left: 50%;
+    /* left: 50%; */
     margin-left: 2rem;
+    z-index: 0;
 
   }
 
@@ -1056,7 +1200,7 @@ h3 {
     padding: 10px;
     position: relative;
     background-color: inherit;
-    width: 50%;
+    /* width: 50%;   */
   }
 
   /* The circles on the timeline */
@@ -1077,110 +1221,14 @@ h3 {
 
     width: 22px;
     height: 22px;
-    background-color: yellow;
+    background-color: rgb(245, 245, 136);
     transition: .5s;
 
   }
 
-
-  /* Add arrows to the left container (pointing right) */
-  /* .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+  .computer1 {
+    display: none;
   }
-
-  /* Add arrows to the right container (pointing left) */
-  /* .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  */
-
-  /* The actual content */
-  .content {
-    padding: 20px;
-
-    position: relative;
-    border-radius: 6px;
-
-  }
-
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 900px) {
-
-    /* Place the timelime to the left */
-    .timeline::after {
-      left: 17px;
-    }
-
-    /* Full-width containers */
-    .container {
-      width: 100%;
-      padding-left: 50px;
-      padding-right: 20px;
-      margin-bottom: 5rem;
-    }
-
-    Make sure that all arrows are pointing leftwards .container::before {
-      top: 20px;
-      left: 35px;
-      border-width: 10px 15px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-      left: 8px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-      left: 0%;
-    }
-  }
-
-
-  .c-modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: 85vw;
-    height: 90vh;
-
-    color: rgb(7, 7, 7);
-
-    border-radius: 5px;
-    background-image: url('../assets/底2.jpg');
-    background-size: 100%;
-    z-index: 10001;
-    opacity: 1;
-    transition: .6s;
-    overflow: scroll;
-    overflow-x: hidden;
-  }
-
-
 }
 
 .c-modal {

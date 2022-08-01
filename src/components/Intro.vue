@@ -1,171 +1,182 @@
 <template>
-    <div class="layout">
+    <div class="layout" id="game">
 
-        <section class=" bg--main game__wrap layout">
-            <div class="container py-5">
 
-                <div class="row">
-                    <div class="col-xl-12 mx-auto game" v-show="end">
-                        <div :class="['game__man', { isQuiz: start }]"></div>
-                        <div class="game__desc" v-if="!start">
-                            <a class="btn1" v-on:click="
-    startQuiz();
-start = !start;
-                            ">立即檢測
-                            </a>
+        <section class=" bg--main game__wrap ">
+
+
+            <div class="row">
+                <div v-show="end">
+                    <div :class="[{ isQuiz: start }]"></div>
+                    <div class="game__desc" v-if="!start">
+                        <div class="title">
+                            <h1 class="titleh1">鬼怪愛情診斷書</h1>
+                            <h2 class="titleh2">你的愛情觀屬於哪種台灣鬼怪?</h2>
+                            <p class="titlep">農曆七月，也是俗稱的「鬼月」，講到妖魔鬼怪，你第一個會聯想到什麼？是殭屍、魔神仔，還是紅衣小女孩？<br>
+
+                                現在就來做個心理測驗，看看你在愛情中，屬於哪個台灣鬼怪？
+                            </p>
+                            <a class="startbtn" id="" v-on:click="startQuiz(); start = !start; ">立即檢測</a>
                         </div>
+                    </div>
 
-                        <!-- <p>{{ quesA }}</p>
-                        <p>{{ quesB }}</p>
-                        <p>{{ quesC }}</p>
-                        <p>{{ quesD }}</p> -->
 
-                        <div class="row mt-5">
-                            <div class="game__quiz">
-                                <img src="" class="city" alt="" />
+                    <div class="row mt-5  game">
+                        <div class="game__quiz">
+                            <div class="Q">
                                 <div class="num">
                                     第<span>{{ q_data[q_no].t }}</span>則 情境題
                                 </div>
                                 <div class="ques">{{ q_data[q_no].ques }}</div>
-                                <div>
-                                    <div class="ans__wrap" v-show="q_no == 0">
-                                        <div class="ans">
-                                            <label>
-                                                <input @click="next" type="radio" name="quesA" v-model="quesA"
-                                                    :value="q_data[q_no].value[0]" />
-                                                {{ q_data[q_no].ans[0] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesA" v-model="quesA"
-                                                    :value="q_data[q_no].value[1]" />
-                                                {{ q_data[q_no].ans[1] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesA" v-model="quesA"
-                                                    :value="q_data[q_no].value[2]" />
-                                                {{ q_data[q_no].ans[2] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesA" v-model="quesA"
-                                                    :value="q_data[q_no].value[3]" />
-                                                {{ q_data[q_no].ans[3] }}
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <a href="" class="back">
-                                        <span>回首頁</span>
-                                    </a>
-                                    <div class="ans__wrap" v-show="q_no == 1">
-                                        <div class="ans">
-                                            <label>
-                                                <input @click="next" type="radio" name="quesB" v-model="quesB"
-                                                    :value="q_data[q_no].value[0]" />
-                                                {{ q_data[q_no].ans[0] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesB" v-model="quesB"
-                                                    :value="q_data[q_no].value[1]" />
-                                                {{ q_data[q_no].ans[1] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesB" v-model="quesB"
-                                                    :value="q_data[q_no].value[2]" />
-                                                {{ q_data[q_no].ans[2] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesB" v-model="quesB"
-                                                    :value="q_data[q_no].value[3]" />
-                                                {{ q_data[q_no].ans[3] }}
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="ans__wrap" v-show="q_no == 2">
-                                        <div class="ans">
-                                            <label>
-                                                <input @click="next" type="radio" name="quesC" v-model="quesC"
-                                                    :value="q_data[q_no].value[0]" />
-                                                {{ q_data[q_no].ans[0] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesC" v-model="quesC"
-                                                    :value="q_data[q_no].value[1]" />
-                                                {{ q_data[q_no].ans[1] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesC" v-model="quesC"
-                                                    :value="q_data[q_no].value[2]" />
-                                                {{ q_data[q_no].ans[2] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesC" v-model="quesC"
-                                                    :value="q_data[q_no].value[3]" />
-                                                {{ q_data[q_no].ans[3] }}
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="ans__wrap" v-show="q_no == 3">
-                                        <div class="ans">
-                                            <label>
-                                                <input @click="next" type="radio" name="quesD" v-model="quesD"
-                                                    :value="q_data[q_no].value[0]" />
-                                                {{ q_data[q_no].ans[0] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesD" v-model="quesD"
-                                                    :value="q_data[q_no].value[1]" />
-                                                {{ q_data[q_no].ans[1] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesD" v-model="quesD"
-                                                    :value="q_data[q_no].value[2]" />
-                                                {{ q_data[q_no].ans[2] }}
-                                            </label>
-                                            <label>
-                                                <input @click="next" type="radio" name="quesD" v-model="quesD"
-                                                    :value="q_data[q_no].value[3]" />
-                                                {{ q_data[q_no].ans[3] }}
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button class="back" v-if="q_no != 0" @click="back()">
-                                    <span>回上一題</span>
-                                </button>
                             </div>
+
+                            <!-- <img src="" class="city" alt="" /> -->
+
+                            <div class="ans__wrap row " v-show="q_no == 0">
+                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <div class="ans col-6">
+                                    <label>
+                                        <input @click="next" type="radio" name="quesA" v-model="quesA"
+                                            :value="q_data[q_no].value[0]" />
+                                        {{ q_data[q_no].ans[0] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesA" v-model="quesA"
+                                            :value="q_data[q_no].value[1]" />
+                                        {{ q_data[q_no].ans[1] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesA" v-model="quesA"
+                                            :value="q_data[q_no].value[2]" />
+                                        {{ q_data[q_no].ans[2] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesA" v-model="quesA"
+                                            :value="q_data[q_no].value[3]" />
+                                        {{ q_data[q_no].ans[3] }}
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ans__wrap row" v-show="q_no == 1">
+                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <div class="ans col-6">
+                                    <label>
+                                        <input @click="next" type="radio" name="quesB" v-model="quesB"
+                                            :value="q_data[q_no].value[0]" />
+                                        {{ q_data[q_no].ans[0] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesB" v-model="quesB"
+                                            :value="q_data[q_no].value[1]" />
+                                        {{ q_data[q_no].ans[1] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesB" v-model="quesB"
+                                            :value="q_data[q_no].value[2]" />
+                                        {{ q_data[q_no].ans[2] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesB" v-model="quesB"
+                                            :value="q_data[q_no].value[3]" />
+                                        {{ q_data[q_no].ans[3] }}
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ans__wrap row" v-show="q_no == 2">
+                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <div class="ans col-6">
+                                    <label>
+                                        <input @click="next" type="radio" name="quesC" v-model="quesC"
+                                            :value="q_data[q_no].value[0]" />
+                                        {{ q_data[q_no].ans[0] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesC" v-model="quesC"
+                                            :value="q_data[q_no].value[1]" />
+                                        {{ q_data[q_no].ans[1] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesC" v-model="quesC"
+                                            :value="q_data[q_no].value[2]" />
+                                        {{ q_data[q_no].ans[2] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesC" v-model="quesC"
+                                            :value="q_data[q_no].value[3]" />
+                                        {{ q_data[q_no].ans[3] }}
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="ans__wrap row" v-show="q_no == 3">
+                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <div class="ans col-6">
+                                    <label>
+                                        <input @click="next" type="radio" name="quesD" v-model="quesD"
+                                            :value="q_data[q_no].value[0]" />
+                                        {{ q_data[q_no].ans[0] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesD" v-model="quesD"
+                                            :value="q_data[q_no].value[1]" />
+                                        {{ q_data[q_no].ans[1] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesD" v-model="quesD"
+                                            :value="q_data[q_no].value[2]" />
+                                        {{ q_data[q_no].ans[2] }}
+                                    </label>
+                                    <label>
+                                        <input @click="next" type="radio" name="quesD" v-model="quesD"
+                                            :value="q_data[q_no].value[3]" />
+                                        {{ q_data[q_no].ans[3] }}
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                            <button class="back" v-if="q_no != 0" @click="back()">
+                                <span>回上一題</span>
+                            </button>
                         </div>
                     </div>
-                    <!-- end會到此 -->
-                    <div id="result_img" class="col-lg-12 mx-auto result row mt-2" v-show="result_">
-                        <p id="sum">{{ quesA }}+{{ quesB }}+{{ quesC }}+{{ quesD }}</p>
-                        <img src="" style="width: 120%" />
-
+                </div>
+                <!-- end會到此 -->
+                <div id="result_img" class=" result  " v-show="result_">
+                    <p id="sum">{{ quesA }}+{{ quesB }}+{{ quesC }}+{{ quesD }}</p>
+                    <img src="" class="result__img" />
+                    <div class="resultbtn row">
                         <a class="col-4" href="#intro"><img src="../assets/台灣神怪知多少btn.png" alt="" />
                         </a>
                         <a class="col-4" href="#faq"><img src="../assets/QAbtn.png" alt="" />
                         </a>
                         <a class="col-4" href=""><img src="../assets/重新測驗btn.png" alt="" />
                         </a>
-                        <div class="share">
-                            <a class="col-3" target="_blank"
-                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Fwarm%2F&amp;src=sdkpreparse"><img
-                                    src="../assets/fb.png" alt="" />
-                            </a>
-                            <a class="col-3" href="#intro"><img src="../assets/ig.png" alt="" />
-                            </a>
-                            <a class="col-3"
-                                href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/warm/"
-                                target="_blank"><img src="../assets/line.png" alt="" />
-                            </a>
-                            <a class="col-3" target="_blank" @click="getLocalUrl"><img src="../assets/share.png"
-                                    alt="" />
-                            </a>
-                        </div>
                     </div>
+                    <!-- <div class="share row">
+                        <a class="col-4" target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Ftaiwanghost%2F&amp;src=sdkpreparse"><img
+                                src="../assets/fb.png" alt="" />
+                        </a>
+                        <a class="col-3" href="#intro">
+                            <img src="../assets/ig.png" alt="" />
+                        </a>
+                        <a class="col-4"
+                            href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/taiwanghost/"
+                            target="_blank">
+                            <img src="../assets/line.png" alt="" />
+                        </a>
+                        <a class="col-4" target="_blank" @click="getLocalUrl">
+                            <img src="../assets/share.png" alt="" />
+                        </a>
+                    </div> -->
                 </div>
             </div>
+
+
         </section>
     </div>
 </template>
@@ -199,12 +210,7 @@ export default {
       ogimg: "",
       q_no: 0,
       q_data: [
-        // ｜金魅｜4-7
-        // ｜白鹿｜8-11
-        // ｜魔神仔｜12-15
-        // ｜貓將軍｜16-19
-        // ｜陳守娘｜20-23
-        // ｜林投姐｜24-28
+
         {
           url: require("../assets/monster1.png"),
           img: require("../assets/monster1.png"),
@@ -332,25 +338,107 @@ export default {
 .layout {
     width: 100%;
     min-height: 200px;
-}
-
-img {
-    pointer-events: none;
 
 }
 
 
+.Q {
+    margin: auto;
+    width: 820px;
+}
 
-.ans_wrap {
-    height: 100vh;
+@media screen and (max-width: 1000px) {
+    .Q {
+        margin: auto;
+        width: 500px;
+    }
+}
+
+/* title */
+.title {
+    width: fit-content;
+    z-index: 99;
+    top: 50px;
+    margin: auto;
+    position: relative;
+    max-width: 1000px;
+
+}
+
+.titleh1 {
+    font-family: "華康古印體";
+    color: #000000;
+    text-align: left;
+    margin-bottom: -4px;
+}
+
+.titleh2 {
+    font-family: "華康古印體";
+    color: #000000;
+    text-align: left;
+    margin-bottom: -4px;
+}
+
+
+.titlep {
+    font-family: "華康古印體";
+    color: #000000;
+    text-align: left;
+    margin-bottom: -4px;
+    font-size: 19px;
+
+
+}
+
+/* titleend */
+.startbtn {
+
+    padding: 0.5rem 1.2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    filter: contrast(0.7);
+    font-size: 22px;
+    background-color: #333333;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
+
+.ans__wrap {
+    height: 100%;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+
+}
+
+.ans__wrap img {
+    margin-top: 30px;
+    height: 350px;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .ans__wrap img {
+        display: none;
+
+
+    }
 }
 
 .share {
-    width: 360px;
+    width: 280px;
     cursor: pointer;
     position: absolute;
-    top: 23.5rem;
-    left: 34rem;
+    top: 400px;
+    left: 620px;
 }
 
 img {
@@ -358,36 +446,16 @@ img {
 }
 
 
-
-/* button {
-
-    border-radius: 30px;
-    border: none;
-    font-weight: 400;
-    background-color: #373737;
-    color: #fff;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    font-size: 1.625rem;
-    line-height: 1;
-    height: 3.5rem;
-    /* top: 30rem; */
-
-/* 立即測驗btn */
 .btn1 {
     width: 200px;
-    border-radius: 1px;
+    /* border-radius: 1px;
     font-size: 20px;
     position: absolute;
-    bottom: -10rem;
-    padding: 0.3rem 0.8rem;
-    left: 0.65rem;
-    transform: translateX(-50%);
+    top: 11px;
     background-color: #ffffff;
-    /* color: var(--main_color); */
+    color: var(--main_color); */
     color: #333333;
+
 }
 
 .btn3 {
@@ -408,67 +476,7 @@ div p {
 
 
 
-/* a {
-    border: 1px solid var(--main_color);
-    border-radius: 5px;
-    padding: 0.5rem 2rem;
-    position: absolute;
-    top: 50%;
-    font-size: 24px;
-    left: 50%;
-    height: fit-content;
-    transform: translateX(-50%);
-    background-color: #fff;
-    color: var(--main_color);
-    text-decoration: none;
-    cursor: pointer;
-} */
 
-@media screen and (max-width: 1024px) {
-    a {
-        border: 1px solid var(--main_color);
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        position: absolute;
-        bottom: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #fff;
-        color: var(--main_color);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    a {
-        border: 1px solid var(--main_color);
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        position: absolute;
-        bottom: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #fff;
-        color: var(--main_color);
-    }
-}
-
-@media screen and (max-width: 500px) {
-
-    /* 立即測驗btn */
-    a {
-        display: fixed;
-        border-radius: 1px;
-        font-size: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #ffffff;
-        /* color: var(--main_color); */
-        color: #333333;
-        top: 80%;
-    }
-
-    /* 繼續閱讀btn */
-}
 
 .btn2 {
     width: 200px;
@@ -484,21 +492,11 @@ div p {
     color: #ffffff;
 }
 
-picture {
-    height: 100vh;
-}
+
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500|Noto+Sans:wght@700|Roboto:400,700&display=swap);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-/* 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-*,
-::after,
-::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 html {
     padding: 0 !important;
@@ -508,15 +506,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
+
 section {
     display: block;
 }
@@ -541,52 +531,23 @@ main {
 }
 
 
-hr {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
 
 pre {
     font-family: monospace, monospace;
     font-size: 1em;
 }
 
-a {
-    background-color: transparent;
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-}
-
-b,
 strong {
     font-weight: bolder;
 }
 
-code,
-kbd,
+
 samp {
     font-family: monospace, monospace;
     font-size: 1em;
 }
 
-small {
-    font-size: 80%;
-}
 
-sub,
 sup {
     font-size: 75%;
     line-height: 0;
@@ -606,10 +567,7 @@ img {
     border-style: none;
 }
 
-button,
-input,
-optgroup,
-select,
+
 textarea {
     font-family: inherit;
     font-size: 100%;
@@ -617,59 +575,27 @@ textarea {
     margin: 0;
 }
 
-button,
 input {
     overflow: visible;
 }
 
-button,
+button {
+    border: 1px none;
+}
+
 select {
     text-transform: none;
 }
 
-[type="button"],
-[type="reset"],
-[type="submit"],
-button {
-    -webkit-appearance: button;
-}
 
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
 
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
 
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
 
-legend {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
-}
 
-progress {
-    vertical-align: baseline;
-}
 
-textarea {
-    overflow: auto;
-}
+
+
+
 
 [type="checkbox"],
 [type="radio"] {
@@ -683,14 +609,9 @@ textarea {
     height: auto;
 }
 
-[type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-}
 
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
+
+
 
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
@@ -709,9 +630,6 @@ template {
     display: none;
 }
 
-[hidden] {
-    display: none;
-}
 
 ul {
     list-style-type: none;
@@ -719,72 +637,10 @@ ul {
     margin-bottom: 0;
 }
 
-.col-1-5,
-.col-lg-1-5,
-.col-md-1-5,
-.col-sm-1-5,
-.col-xl-1-5,
-.col-xs-1-5 {
-    position: relative;
-    min-height: 1px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
-.col-1-5,
-.col-xs-1-5 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
-}
 
-@media (min-width: 576px) {
-    .col-sm-1-5 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
 
-@media (min-width: 768px) {
-    .col-md-1-5 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
 
-@media (min-width: 992px) {
-    .col-lg-1-5 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-xl-1-5 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    font-family: "Noto Sans TC", "Helvetica Neue", Roboto, "Microsoft JhengHei",
-        Arial, sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-}
 
 :focus {
     outline: 0;
@@ -795,66 +651,8 @@ html {
 }
 
 
-h2 {
-    font-size: 2.1875rem;
-    line-height: 1.4;
-    font-weight: 500;
-}
 
-h3 {
-    font-size: 2.8125rem;
-    line-height: 1.4;
-    font-weight: 500;
-}
 
-h4 {
-    font-size: 1.5625rem;
-    line-height: 1.4;
-    font-weight: 400;
-}
-
-h5 {
-    font-size: 14px;
-    line-height: 1.8;
-    font-weight: 300;
-}
-
-h6 {
-    font-size: 12px;
-    line-height: 1.6;
-    font-weight: 300;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.85;
-    font-weight: 300;
-    margin-bottom: 0;
-}
-
-a {
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 1.85;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #f9e46c;
-}
-
-strong {
-    font-weight: 500;
-}
-
-blockquote {
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 500;
-    margin-bottom: 0;
-}
 
 li {
     list-style: none;
@@ -862,24 +660,12 @@ li {
     font-size: 18px;
 }
 
-button {
-    outline: 0;
-    border: 0;
-}
-
-button:focus {
-    outline: 0;
-}
 
 input {
     outline: 0;
     font-weight: 300;
 }
 
-img {
-    display: block;
-    width: 100%;
-}
 
 .hide {
     display: none !important;
@@ -901,22 +687,8 @@ img {
     text-align: left;
 }
 
-.text--anton {
-    font-family: Anton, "Noto Sans TC", Roboto, "Microsoft JhengHei", Arial,
-        sans-serif;
-}
 
-.list--decimal {
-    padding-left: 18px;
-}
 
-.list--decimal li {
-    list-style: decimal;
-}
-
-.list--upperAlpha {
-    padding-left: 18px;
-}
 
 .list--upperAlpha li {
     list-style: upper-alpha;
@@ -938,14 +710,6 @@ img {
     clear: both;
 }
 
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl {
-    padding-right: 40px;
-    padding-left: 40px;
-}
 
 .main {
     max-width: 1200px;
@@ -966,35 +730,6 @@ img {
     overflow: hidden;
 }
 
-.footer {
-    text-align: center;
-    padding: 50px;
-    background-color: #373737;
-    color: #fff;
-    font-size: 12px;
-}
-
-.footer a,
-.footer span {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-.footer a:hover {
-    color: #f9e46c;
-}
-
-.footer p {
-    font-size: 12px;
-    line-height: 1.2;
-    color: #fff;
-    margin-bottom: 0.25rem;
-    font-weight: 300;
-}
-
-.footer__co {
-    width: 150px;
-}
 
 .mfp-iframe-scaler {
     overflow: unset;
@@ -1022,25 +757,13 @@ img {
 
 @media (min-width: 1440px) {
 
-    .container,
-    .container--half,
-    .container-lg,
-    .container-md,
-    .container-sm,
+
     .container-xl {
         max-width: 1365px;
     }
 }
 
-@media only screen and (max-width: 1440px) {
-    h3 {
-        font-size: 2.375rem;
-    }
-
-    h4 {
-        font-size: 1.375rem;
-    }
-}
+@media only screen and (max-width: 1440px) {}
 
 @media only screen and (max-width: 768px) {
     h2 {
@@ -1074,12 +797,7 @@ img {
     }
 }
 
-.navbar__wrap {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
+
 
 .navbar__brand {
     width: 155px;
@@ -1100,104 +818,6 @@ img {
     transition: 0.3s;
 }
 
-.navbar__btn {
-    width: 23px;
-    height: 20px;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: unset;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    z-index: 1;
-}
-
-.navbar__list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: #2544a1; */
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-top: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: left;
-    padding: 0 70px;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.navbar__list ul {
-    width: 100%;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.navbar__list ul li {
-    margin: 25px 0;
-}
-
-.navbar__list ul li a:hover {
-    color: #f9e46c;
-}
-
-.navbar__list ul li span {
-    display: block;
-    text-align: right;
-    line-height: 1.5;
-}
-
-.navbar__list .menu__title {
-    font-size: 1.875rem;
-    font-weight: 500;
-    color: #fff;
-    word-break: keep-all;
-}
-
-.navbar__list .menu__subTitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #f9e46c;
-    margin-top: 5px;
-}
-
-.navbar__show .navbar__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.navbar__close {
-    background-image: url(../assets/bear.jpg);
-}
 
 #nav-show {
     display: none;
@@ -1231,67 +851,23 @@ img {
     background-image: url(../assets/29-金魅.jpg);
     background-size: cover;
     background-repeat: repeat-x;
-    position: absolute;
-    bottom: -520px;
-    left: -400px;
-    /* -webkit-animation: city-move 30s linear infinite;
-    animation: city-move 30s linear infinite */
+    /* position: absolute; */
+    position: relative;
+
 }
 
-@-webkit-keyframes city-move {
-    from {
-        background-position-x: 0;
-    }
 
-    to {
-        background-position-x: -1825px;
-    }
-}
 
-@keyframes city-move {
-    from {
-        background-position-x: 0;
-    }
 
-    to {
-        background-position-x: -1825px;
-    }
-}
 
-.game {
-    /* padding: 150px 0; */
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    /* justify-content: center; */
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
 
-.game__man {
-    max-width: 630px;
-    width: 60%;
-    padding-right: 4.375rem;
-    -webkit-animation: man 3s ease-in-out infinite;
-    animation: man 3s ease-in-out infinite;
-}
 
-.game__man.isQuiz {
-    max-width: 450px;
-}
 
 .game__desc .imageWrap {
     max-width: 380px;
 }
 
-.game__desc p {
-    font-size: 1.375rem;
-    font-weight: 500;
-    margin: 2.5rem 0;
-}
+
 
 .chBtn .game__desc span,
 .game__desc .chBtn,
@@ -1346,7 +922,10 @@ img {
 .game__quiz {
     display: none;
     /* max-width: calc(100% - 50px); */
-    margin-top: -30px;
+
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .game__quiz .num {
@@ -1373,6 +952,7 @@ img {
     text-align: start;
     left: 30px;
     font-family: "華康愛情體W5";
+    color: white;
 }
 
 .game__quiz .ans {
@@ -1385,12 +965,13 @@ img {
 }
 
 .game__quiz .ans input {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     background-color: #373737;
     border: 1px solid #cacaca;
-    top: 5px;
+    top: 10px;
     margin-right: 18px;
+
     font-family: "華康愛情體W5";
 }
 
@@ -1400,10 +981,10 @@ img {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: rgb(239, 239, 239);
     position: absolute;
-    top: 1px;
-    left: 1px;
+
+
     font-family: "華康愛情體W5";
 }
 
@@ -1480,16 +1061,32 @@ label:hover {
 
 .result {
     -webkit-filter: grayscale(0.2);
-    width: 85%;
-    /* background-image: url('../assets/ans1.png'); */
+    padding: 1rem;
+    /* margin: 1rem; */
+    margin: 50px auto;
+
+    max-width: 1200px;
+
+}
+
+.resultbtn {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0px;
+
 }
 
 .result img {
-    width: 100%;
+    width: 85%;
+    margin: auto;
+}
+
+.result__img {
+    width: 1200px;
 }
 
 .result a {
-    margin-top: -7rem;
+    margin-top: -6rem;
     padding: 1rem 1rem 3rem;
 }
 
@@ -1524,10 +1121,7 @@ label:hover {
     left: -20px;
 }
 
-.result .top__img .imageWrap {
-    -webkit-filter: drop-shadow(6px 4px 0 rgba(250, 184, 74, 0.7));
-    filter: drop-shadow(6px 4px 0 rgba(250, 184, 74, 0.7));
-}
+
 
 .result .top__desc {
     text-align: center;
@@ -1644,130 +1238,11 @@ label:hover {
     background-repeat: no-repeat;
 }
 
-.links {
-    margin: 40px 0;
-}
 
-.links .sqBtn,
-.links .sqBtn span {
-    text-align: center;
-    padding: 15px 0;
-    border-radius: 8px;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-}
 
-.links .sqBtn span {
-    display: block;
-    position: absolute;
-    width: calc(100%);
-    height: calc(100%);
-    left: 0;
-    top: 0;
-    -webkit-clip-path: inset(0 100% 0 0);
-    clip-path: inset(0 100% 0 0);
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
 
-.links .sqBtn--sub {
-    background-color: #2544a1;
-    color: #fff;
-}
-
-.links .sqBtn--sub span {
-    background-color: #373737;
-    color: #fff;
-}
-
-.links .sqBtn--line {
-    background-color: #f3f3f3;
-    color: #2544a1;
-    border: 1px solid #2544a1;
-}
-
-.links .sqBtn--line span {
-    background-color: #373737;
-    border: 1px solid #373737;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    top: -1px;
-    left: -1px;
-    color: #fff;
-}
-
-.share {
-    margin: 20px 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.icon__social {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-image: url(../assets/bear.jpg);
-    margin: 0 10px;
-}
-
-.icon__social--fb {
-    background-position-x: 0;
-}
-
-.icon__social--line {
-    background-position-x: -60px;
-}
-
-.scrolldown {
-    width: 90px;
-    height: 60px;
-    background-image: url(../assets/bear.jpg);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-@media only screen and (min-width: 768px) {
-    .links .sqBtn--sub:hover span {
-        -webkit-clip-path: inset(0 0 0 0);
-        clip-path: inset(0 0 0 0);
-    }
-
-    .links .sqBtn--line:hover {
-        color: #2544a1;
-    }
-
-    .links .sqBtn--line:hover span {
-        -webkit-clip-path: inset(0 0 0 0);
-        clip-path: inset(0 0 0 0);
-    }
-}
 
 @media only screen and (max-width: 1199px) {
-    .result .talk {
-        font-size: 1.25rem;
-        right: -125px;
-        top: -17%;
-    }
 
     .result .top__desc {
         left: -50px;
@@ -1790,6 +1265,7 @@ label:hover {
     }
 }
 
+/* 
 @media only screen and (max-width: 992px) {
     .game {
         -webkit-box-orient: vertical;
@@ -1821,8 +1297,6 @@ label:hover {
         margin-right: auto;
     }
 
-    .chBtn .game__desc span,
-    .game__desc .chBtn,
     .game__desc .chBtn span {
         margin-left: auto;
         margin-right: auto;
@@ -1908,11 +1382,15 @@ label:hover {
     .icon__social--line {
         background-position-x: -35px;
     }
-}
+} */
 
 @media only screen and (max-width: 768px) {
     .game__wrap {
         min-height: 800px !important;
+    }
+
+    .bg--main {
+        min-height: 300px !important;
     }
 
     .game__desc {
@@ -2072,31 +1550,7 @@ label:hover {
     color: #2544a1;
 }
 
-.chBtn--line:hover span {
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
-}
 
-.chBtn--gray {
-    background-color: #373737;
-    color: #fff;
-    padding: 10px 40px;
-}
-
-.chBtn--gray span {
-    background-color: #2544a1;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    line-height: 1.8;
-}
-
-.chBtn--gray:hover span {
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
-}
 
 .arrow__right {
     width: 0;
@@ -2108,143 +1562,23 @@ label:hover {
     margin-left: 12px;
 }
 
-.arrow__right--sub {
-    border-left: 13px solid #2544a1;
-}
 
-.arrow__right--main {
-    border-left: 13px solid #f9e46c;
-}
 
 .bg--main {
-    background-image: url("../assets/底2.jpg");
-    height: 30rem;
+    background-image: url("../assets/banner2.jpg");
+    height: 300px;
     background-size: cover;
 }
 
 .bg--main2 {
-    background-image: url("../assets/底1.png");
-
-    background-size: cover;
-}
-
-.bg--main3 {
-    background-color: #f9e46c;
-
-    height: 100vh;
-    background-size: cover;
-}
-
-.bg--gray {
-    background-color: #373737;
-}
-
-.bg--lighter {
-    background-color: #f3f3f3;
-}
-
-.bg--half:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 60%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #f3f3f3;
-}
-
-.bg h1,
-.bg p {
-    color: #fff;
-}
-
-.color--main {
-    color: #f9e46c;
-}
-
-.color--sub {
-    color: #2544a1;
-}
-
-.color--gray {
-    color: #373737;
-}
-
-.color--light {
-    color: #959595;
-}
-
-.color--lighter {
-    color: #f3f3f3;
-}
-
-.color--darkless {
-    color: #595959;
-}
-
-/* .cloud {
-    background-image: url(../assets/bear.jpg);
-    background-size: 1500px 800px;
-    background-repeat: repeat;
-    -webkit-animation: cloud-move 110s linear infinite;
-    animation: cloud-move 110s linear infinite
-} */
-
-@-webkit-keyframes cloud-move {
-    from {
-        background-position-x: 0;
-    }
-
-    to {
-        background-position-x: -1500px;
-    }
-}
-
-@keyframes cloud-move {
-    from {
-        background-position-x: 0;
-    }
-
-    to {
-        background-position-x: -1500px;
-    }
-}
-
-.section__container {
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
-}
-
-.section__title {
-    margin-bottom: 3.75rem;
-    word-break: keep-all;
-}
-
-.section__title:before {
-    content: "";
-    width: 60px;
-    height: 45px;
-    display: block;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* .fire:before {
-    content: '';
-    display: block;
-    width: 100%;
+    background-image: url("../assets/banner1.jpg");
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat
-} */
+}
+
+
+
+
 
 .slider--title {
     margin-top: 20px;
@@ -2302,8 +1636,8 @@ label:hover {
     position: absolute;
     background-image: url(../assets/bear.jpg);
     top: 5px;
-    width: 14px;
-    height: 24px;
+    width: 400px;
+    height: 400px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2328,12 +1662,6 @@ label:hover {
     transform: rotate(180deg);
 }
 
-.container--half {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -6.25rem;
-    padding-bottom: 6.25rem;
-}
 
 .half__item {
     padding: 0 1.25rem;
@@ -2346,27 +1674,8 @@ label:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.topic {
-    text-align: center;
-    color: #2544a1;
-    font-size: 1.125rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
 
-.topic:before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 45px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3px;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 .chart__title {
     text-align: center;
@@ -2388,106 +1697,32 @@ label:hover {
     margin-top: 10px;
 }
 
-.backtop {
-    width: 65px;
-    height: 65px;
-    position: fixed;
-    right: 20px;
-    bottom: 40px;
-    cursor: pointer;
-    z-index: 1;
-    background: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-animation: backtop 2s ease-in-out infinite;
-    animation: backtop 2s ease-in-out infinite;
+
+
+
+
+
+
+.bgLink .fire:before {
+    -o-transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-@-webkit-keyframes backtop {
-    0% {
-        bottom: 30px;
-    }
-
-    50% {
-        bottom: 60px;
-    }
-
-    100% {
-        bottom: 30px;
-    }
+.bgLink:hover .fire:before {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-@keyframes backtop {
-    0% {
-        bottom: 30px;
-    }
-
-    50% {
-        bottom: 60px;
-    }
-
-    100% {
-        bottom: 30px;
-    }
+.container--half .row {
+    margin-left: -35px;
+    margin-right: -35px;
 }
 
-@media only screen and (min-width: 768px) {
-    .imgLink .imageWrap {
-        overflow: hidden;
-    }
-
-    .imgLink img {
-        -o-transition: transform 0.3s ease;
-        -webkit-transition: transform 0.3s ease;
-        -webkit-transition: -webkit-transform 0.3s ease;
-        transition: -webkit-transform 0.3s ease;
-        transition: transform 0.3s ease;
-        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    }
-
-    .imgLink:hover img {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
-    .imgLink:hover .color--lighter {
-        color: #f9e46c;
-    }
-
-    .imgLink:hover .color--darkless {
-        color: #2544a1;
-    }
-
-    .imgLink:hover .color--gray {
-        color: #2544a1;
-    }
-
-    .bgLink .fire {
-        overflow: hidden;
-    }
-
-    .bgLink .fire:before {
-        -o-transition: transform 0.3s ease;
-        -webkit-transition: transform 0.3s ease;
-        -webkit-transition: -webkit-transform 0.3s ease;
-        transition: -webkit-transform 0.3s ease;
-        transition: transform 0.3s ease;
-        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    }
-
-    .bgLink:hover .fire:before {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
-    .container--half .row {
-        margin-left: -35px;
-        margin-right: -35px;
-    }
-}
 
 @media only screen and (max-width: 1440px) {
     .section__title {

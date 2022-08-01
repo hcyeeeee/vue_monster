@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <Header />
-        <Banner2 />
-        <!-- <Intro /> -->
+        <!-- <Header /> -->
+        <Banner />
+        <Intro />
         <Section />
         <faq />
         <Video />
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import Banner2 from '@/components/banner2.vue'
-// import Banner from '@/components/Banner.vue'
-// import Intro from '@/components/intro.vue'
+// import Header from '@/components/Header.vue'
+// import Banner2 from '@/components/banner2.vue'
+import Banner from '@/components/Banner.vue'
+import Intro from '@/components/Intro.vue'
 import Section from '@/components/section.vue'
 import faq from '@/components/faq.vue'
 import Video from '@/components/Video.vue'
@@ -28,9 +28,9 @@ import Footer from '@/components/Footer.vue'
 export default {
     name: 'App',
     components: {
-        Header,
-        Banner2,
-        // Intro,
+        // Header,
+        Banner,
+        Intro,
         Section,
         faq,
         Video,
@@ -215,11 +215,10 @@ p {
 
 h2 {
     text-align: center;
-    font-size: 1.8rem;
-    font-style: oblique;
+
     font-weight: bold;
-    letter-spacing: 0.3rem;
-    padding: 1rem 0 2rem 0;
+    letter-spacing: 6px;
+    padding: 6px 0;
 }
 
 h3 {

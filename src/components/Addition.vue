@@ -1,8 +1,36 @@
 <template>
     <div class="layout_addition" @scroll="scroll">
-       
+        <div class="layout_grid">
+            <div class="icon" id="icon">
+                <!-- line -->
+                <a
+                    href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/warm/"
+                    target="_blank"
+                >
+                    <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/warm/">
+                        <img src="../assets/line.png" alt="" width="60px"
+                    /></span>
+                </a>
+                <br />
+                <!-- facebook -->
+                <a
+                    target="_blank"
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Fwarm%2F&amp;src=sdkpreparse"
+                    class="fb-xfbml-parse-ignore"
+                >
+                    <img src="../assets/fb.png" alt="" width="60px"
+                /></a>
+                <br />
+                <!-- localUrl -->
+                <a target="_blank" @click="getLocalUrl" class="fb-xfbml-parse-ignore">
+                    <img src="../assets/share.png" alt="" width="60px"
+                /></a>
+                <br />
+            </div>
+        </div>
+
         <div v-if="scrollY > 100">
-            <i @click="scrollTop" id="toTop" class="fa-solid fa-square-arrow-up fa-3x"></i>
+            <i @click="scrollTop" id="toTop" class="fa-solid fa-square-arrow-up"></i>
         </div>
     </div>
 </template>
@@ -25,6 +53,9 @@ export default {
                 document.body.removeChild(e),
                 alert('網址複製成功!')
         },
+        linkToHome() {
+            window.open('https://www.ftvnews.com.tw/', '_blank')
+        },
 
         scrollTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -41,66 +72,17 @@ export default {
 </script>
 
 <style scoped>
-/* .layout_addition {
-    height: 100px;
-} */
-
-.layout_grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 300px;
-}
-
-a,
-span {
-    display: block;
-    margin: auto;
-    cursor: pointer;
-    filter: contrast(1);
-}
-
-a:hover {
-    background-color: #ffffff00;
-}
-
-.addition {
+.layout_addition {
     position: fixed;
-    top: 5%;
-    right: 1px;
-    border-radius: 15px;
-    padding: 10px 5px;
-    background-color: #f7f7f5;
-    box-shadow: 1px 2px 3px black;
-    z-index: 999;
+    right: 0;
+    top: 0;
+    width: 70px;
 }
-
-#social_line,
-#social_facebook,
-#social_link {
-    display: block;
-    background-size: 36px;
-    width: 36px;
-    height: 41px;
-    background-image: url('../assets/icon_social.png');
-    background-repeat: no-repeat;
-}
-
-#social_line {
-    background-position-y: 0px;
-}
-
-#social_facebook {
-    background-position-y: -41px;
-}
-
-#social_link {
-    background-position-y: -81px;
-}
-
-.fa-square-arrow-up {
+.fa-solid {
+    font-size: 40px;
     position: fixed;
-    right: 1rem;
-    bottom: 4rem;
-    z-index: 9999;
-    color: #525a7d;
+    color: white;
+    bottom: 10px;
+    right: 18px;
 }
 </style>
