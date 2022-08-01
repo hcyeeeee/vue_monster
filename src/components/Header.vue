@@ -1,27 +1,6 @@
 <template>
     <div class="layout_header">
 
-        <div class="container layout_grid">
-            <div class="icon" id="icon">
-                <!-- line -->
-                <a href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/warm/"
-                    target="_blank">
-                    <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/warm/">
-                        <img src="../assets/line.png" alt="" width="60px" /></span>
-                </a>
-                <br />
-                <!-- facebook -->
-                <a target="_blank"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Fwarm%2F&amp;src=sdkpreparse"
-                    class="fb-xfbml-parse-ignore">
-                    <img src="../assets/fb.png" alt="" width="60px" /></a>
-                <br />
-                <!-- localUrl -->
-                <a target="_blank" @click="getLocalUrl" class="fb-xfbml-parse-ignore">
-                    <img src="../assets/share.png" alt="" width="60px" /></a>
-                <br />
-            </div>
-        </div>
 
 
     </div>

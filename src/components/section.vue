@@ -2,7 +2,7 @@
   <div class="layout" id="section">
     <div class="layout_grid">
 
-      <h1>台灣神怪知多少？</h1>
+      <h2>台灣神怪知多少？</h2>
 
     </div>
     <section class="timeline computer1">
@@ -116,10 +116,10 @@
       <div class="row computer">
         <div class="close">+</div>
         <img class="role col-5" src="../assets/37-林投姐.jpg" alt="">
-        <div class="row col-7 content">
-          <h1>林投姐</h1>
+        <div class=" col-7 content">
+          <h2>林投姐</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>講到台灣女鬼，許多人會想到清代府城三大奇案之一的「林投姐」。<br>
@@ -129,11 +129,11 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row ">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 台南火車站</div>
           </div>
           <div class="row">
@@ -144,7 +144,7 @@
             </p>
             <img src="../assets/台南火車站-台南政府網站.jpeg" class="col-6 travel" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p class="col-6"></p>
             <p class="col-6">台南火車站示意圖</p>
           </div>
@@ -153,13 +153,13 @@
       </div>
       <!-- mobile version -->
       <div class="row mobile">
-        <div class="row col-12">
+        <div class=" col-12">
           <img class="role" src="../assets/37-林投姐.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>林投姐</h1>
+        <div class=" col-12 content">
+          <h2>林投姐</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">講到台灣女鬼，許多人會想到清代府城三大奇案之一的「林投姐」。<br>
@@ -169,12 +169,12 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
 
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row">
-            <h3>尋妖之旅</h3>
+            <h4>尋妖之旅</h4>
           </div>
           <div class="row ">
             <p class="col-12">台南火車站
@@ -184,7 +184,7 @@
             </p>
             <img src="../assets/台南火車站-台南政府網站.jpeg" class="col-12 travel" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p>台南火車站示意圖</p>
           </div>
         </div>
@@ -197,10 +197,10 @@
       <!-- computer version -->
       <div class="row computer">
         <img class="role col-5" src="../assets/45-陳守娘.jpg" alt="">
-        <div class="row col-7 content">
-          <h1>陳守娘</h1>
+        <div class="col-7 content">
+          <h2>陳守娘</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>
@@ -209,11 +209,11 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row ">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 台南孔廟、辜婦媽廟</div>
           </div>
           <div class="row">
@@ -222,13 +222,13 @@
             </p>
 
 
-            <p class="col-12">二、辜婦媽廟<br>
+            <p class="col-12    3   3">二、辜婦媽廟<br>
               為祭祀丈夫早逝，仍孝順公婆、將夫婿側室孩子視如己出，並一生守節的辜林氏的廟宇。相傳陳守娘從小在附近生活，耳濡目染之下，成為貞節觀念強烈的女子。
             </p>
             <img src="../assets/台南孔廟-googlemap.png" class="col-6 travel" alt="">
             <img src="../assets/辜婦媽廟-官方粉專2.jpeg" class="col-6 travel" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p class="col-6">台南孔廟示意圖</p>
             <p class="col-6">辜婦媽廟示意圖</p>
           </div>
@@ -240,10 +240,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/45-陳守娘.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>陳守娘</h1>
+        <div class=" col-12 content">
+          <h2>陳守娘</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">
@@ -252,12 +252,12 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
 
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row">
-            <h3>尋妖之旅</h3>
+            <h4>尋妖之旅</h4>
           </div>
           <div class="row ">
             <p class="col-12">一、台南孔廟<br>
@@ -289,12 +289,12 @@
     <!-- 3 -->
     <div class="c-modal container " v-show="modal_3">
       <!-- computer version -->
-      <div class="row computer mt-5">
-        <img class="role2 col-5 mt-5" src="../assets/29-金魅.jpg" alt="">
+      <div class="row computer    5">
+        <img class="role2 col-5    5" src="../assets/29-金魅.jpg" alt="">
         <div class="row col-7 content">
-          <h1>金魅</h1>
+          <h2>金魅</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>
@@ -303,11 +303,11 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 旅館</div>
           </div>
           <div class="row ">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 無</div>
           </div>
         </div>
@@ -317,10 +317,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/29-金魅.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>金魅</h1>
+        <div class=" col-12 content">
+          <h2>金魅</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">
@@ -329,12 +329,12 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 旅館</div>
           </div>
 
-          <div class="row mb-4">
-            <h3 class="col-6">尋妖之旅</h3>
+          <div class="row   4">
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 無</div>
           </div>
         </div>
@@ -346,10 +346,10 @@
       <!-- computer version -->
       <div class="row computer">
         <img class="role col-5" src="../assets/魔神仔.jpg" alt="">
-        <div class="row col-7 content">
-          <h1>魔神仔</h1>
+        <div class="col-7 content">
+          <h2>魔神仔</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>
@@ -360,23 +360,23 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 台北、新北山區</div>
           </div>
           <div class="row ">
-            <h3>尋妖之旅</h3>
+            <h4>尋妖之旅</h4>
           </div>
-          <div class="row mt-2">
+          <div class="row    2">
             <p class="col-12">一、南港魔神仔硿<br>
               根據《尋妖誌》一書，連接南港與石碇的北32鄉道，有個叫「魔神仔硿」的地方。作者實際走訪，一路鬱鬱蒼蒼、祖墳林立，儘管沒見到魔神仔，也充斥著毛骨悚然的恐怖氛圍。
               <br> <br>
               二、平溪魔神仔洞<br>
               「魔神仔洞」位於菁桐古道，從菁桐坑登山口開始，約走半小時路程就能抵達，根據當地人表示，洞穴其實是早期礦業發達時，用來運煤的輕便車道，後來有人將骨灰放在洞裡，才會有靈異流言。
             </p>
-            <img src="../assets/南港大坑.jpg" class="col-6 mt-2 travel" alt="">
-            <img src="../assets/平溪魔神仔洞-googlemap.png" class="col-6 mt-2 travel" alt="">
+            <img src="../assets/南港大坑.jpg" class="col-6    2 travel" alt="">
+            <img src="../assets/平溪魔神仔洞-googlemap.png" class="col-6    2 travel" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p class="col-6">南港魔神仔硿示意圖</p>
             <p class="col-6">平溪魔神仔洞</p>
           </div>
@@ -388,10 +388,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/魔神仔.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>魔神仔</h1>
+        <div class="col-12 content">
+          <h2>魔神仔</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">
@@ -402,14 +402,14 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
 
             <div class="col-6 text"> 台北、新北山區</div>
           </div>
           <div class="row">
-            <h3>尋妖之旅</h3>
+            <h4>尋妖之旅</h4>
           </div>
-          <div class="row  mb-5">
+          <div class="row    5">
             <p class="col-12">一、南港魔神仔硿<br>
               根據《尋妖誌》一書，連接南港與石碇的北32鄉道，有個叫「魔神仔硿」的地方。作者實際走訪，一路鬱鬱蒼蒼、祖墳林立，儘管沒見到魔神仔，也充斥著毛骨悚然的恐怖氛圍。
               <br> <br>
@@ -431,11 +431,11 @@
     <div class="c-modal container" v-show="modal_5">
       <!-- computer version -->
       <div class="row computer">
-        <img class="role col-5" src="../assets/貓將軍.jpg" alt="">
-        <div class="row col-7 content">
-          <h1>貓將軍</h1>
+        <img class="role col-5    5   5" src="../assets/貓將軍.jpg" alt="">
+        <div class="col-7 content">
+          <h2>貓將軍</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>宜蘭頭城當地有個詭譎傳說，相傳1875年左右，有隻山貓妖怪在福德坑一帶作亂，到處殺害家畜、散佈疾病，村民們儘管四處求神問佛，也無法解決，相當困擾。
@@ -444,15 +444,15 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 宜蘭頭城</div>
           </div>
           <div class="row ">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 將軍廟</div>
 
           </div>
-          <div class="row mt-2">
+          <div class="row    2">
             <p class="col-6">
               供奉貓將軍的天神宮，後來因為土匪作亂被燒燬，沒想到多年以後，居民在福德坑溪下游撿到貓將軍神像，便在頭城新建里新興路重新建造一座「將軍廟」，現在也是台灣唯一一間有貓神信仰的廟宇！
             </p>
@@ -471,10 +471,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/貓將軍.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>貓將軍</h1>
+        <div class="col-12 content">
+          <h2>貓將軍</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">宜蘭頭城當地有個詭譎傳說，相傳1875年左右，有隻山貓妖怪在福德坑一帶作亂，到處殺害家畜、散佈疾病，村民們儘管四處求神問佛，也無法解決，相當困擾。
@@ -483,12 +483,12 @@
             </p>
           </div>
           <div class="row  ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
 
             <div class="col-6 text">宜蘭頭城</div>
           </div>
           <div class="row">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 將軍廟</div>
           </div>
           <div class="row ">
@@ -497,7 +497,7 @@
             </p>
             <img src="../assets/將軍廟-頭城新建里將軍廟臉書.jpg" class="col-12 travel" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p>將軍廟示意圖</p>
           </div>
         </div>
@@ -510,9 +510,9 @@
       <div class="row computer">
         <img class="role col-5" src="../assets/01-日月潭白鹿.jpg" alt="">
         <div class="row col-7 content">
-          <h1>白鹿</h1>
+          <h2>白鹿</h2>
           <div class="row col-6">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p>
@@ -521,12 +521,12 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 南投日月潭</div>
           </div>
           <div class="row ">
 
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 士亭仔步道、拉魯島</div>
           </div>
           <div class="row ">
@@ -536,10 +536,10 @@
               二、拉魯島
               位於日月潭的拉魯島（Lalu），是邵族祭祀、求巫的重要場所，因其神聖性，目前禁止遊客登島。若想眺望拉魯島面貌，可從水社頭碼頭乘船前往玄光碼頭，途中近距離駛經拉魯島時眺望最為清楚。
             </p>
-            <br> <img src="../assets/土亭仔步道-日月潭國家風景區網站.jpg" class="col-6 travel mt-2" alt="">
-            <img src="../assets/拉魯島-日月潭國家風景區網站.jpg" class="col-6 travel mt-2" alt="">
+            <br> <img src="../assets/土亭仔步道-日月潭國家風景區網站.jpg" class="col-6 travel    2" alt="">
+            <img src="../assets/拉魯島-日月潭國家風景區網站.jpg" class="col-6 travel    2" alt="">
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
             <p class="col-6">士亭仔步道示意圖</p>
             <p class="col-6">拉魯島示意圖</p>
           </div>
@@ -551,10 +551,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/01-日月潭白鹿.jpg" alt="">
         </div>
-        <div class="row col-12 content">
-          <h1>白鹿</h1>
+        <div class="col-12 content">
+          <h2>白鹿</h2>
           <div class="row col-12">
-            <h3>起源小故事</h3>
+            <h4>起源小故事</h4>
           </div>
           <div class="row">
             <p class="col-12">
@@ -564,11 +564,11 @@
             </p>
           </div>
           <div class="row ">
-            <h3 class="col-6">出沒地區</h3>
+            <h4 class="col-6">出沒地區</h4>
             <div class="col-6 text"> 南投日月潭</div>
           </div>
           <div class="row">
-            <h3 class="col-6">尋妖之旅</h3>
+            <h4 class="col-6">尋妖之旅</h4>
             <div class="col-6 text"> 士亭仔步道<br>拉魯島</div>
           </div>
           <div class="row ">
@@ -583,7 +583,7 @@
             <img src="../assets/土亭仔步道-日月潭國家風景區網站.jpg" class="col-12 travel" alt="">
             <p>拉魯島示意圖</p>
           </div>
-          <div class="row mb-5">
+          <div class="row   5">
 
           </div>
         </div>
@@ -613,21 +613,21 @@ export default {
       title: [
         `台灣神怪小百科`,
       ],
-      times: [
-        { t: '康熙24年', url: require('../assets/monster1.png'), modal: false, },
-        { t: '1887', url: require('../assets/monster2.png'), modal: false, },
-        { t: '1890', url: require('../assets/monster3.png'), modal: false, },
-        { t: '1936', url: require('../assets/monster1.png'), modal: false, },
-        { t: '1952', url: require('../assets/monster2.png'), modal: false, },
-        { t: '1965', url: require('../assets/monster3.png') },
+      // times: [
+      //   { t: '康熙24年', url: require('../assets/monster1.png'), modal: false, },
+      //   { t: '1887', url: require('../assets/monster2.png'), modal: false, },
+      //   { t: '1890', url: require('../assets/monster3.png'), modal: false, },
+      //   { t: '1936', url: require('../assets/monster1.png'), modal: false, },
+      //   { t: '1952', url: require('../assets/monster2.png'), modal: false, },
+      //   { t: '1965', url: require('../assets/monster3.png') },
 
-      ],
-      images: [
-        { url: '../assets/monster1.png' },
-        { url: '../assets/monster2.png' },
-        { url: '../assets/monster3.png' },
+      // ],
+      // images: [
+      //   { url: '../assets/monster1.png' },
+      //   { url: '../assets/monster2.png' },
+      //   { url: '../assets/monster3.png' },
 
-      ]
+      // ]
 
     }
   },
@@ -682,37 +682,20 @@ export default {
 .role {
   height: 100%;
   margin: auto;
-  margin-left: 1.5rem;
+
 
 }
 
 .role2 {
   height: 100%;
   margin: auto;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   margin-top: 2rem;
 }
 
-.c-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 85vw;
-  height: 85vh;
 
-  color: rgb(7, 7, 7);
-
-  border-radius: 5px;
-  background-image: url('../assets/底2.jpg');
-  background-size: 100%;
-  z-index: 10001;
-  opacity: 1;
-  transition: .6s;
-  overflow: scroll;
-  overflow-x: hidden;
+.row .computer {
+  padding: 1rem;
 }
 
 .bg {
@@ -776,7 +759,7 @@ picture {
 }
 
 .timeimg2 {
-  width: 300px;
+  width: 280px;
 }
 
 .layout p {
@@ -956,18 +939,12 @@ button {
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 8px;
-  font-family: 華康古印體;
-}
-
-h1 {
-  margin-top: 35px;
-  text-align: start;
-  font-size: 70px;
-
 
 }
 
-h3 {
+
+
+h4 {
   color: white;
   background: #333333;
   padding: 0.5rem 1rem;
@@ -988,14 +965,14 @@ h3 {
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
 
   .content {
     text-align: center;
 
   }
 
-  h3 {
+  h4 {
     color: white;
     background: #333333;
     padding: 0.5rem 1rem;
@@ -1020,6 +997,7 @@ h3 {
   .role {
     width: 100% 100%;
     /* padding: 2rem 1.5rem 0rem 3rem; */
+    padding-top: 3rem;
 
   }
 
@@ -1128,27 +1106,6 @@ h3 {
 }
 
 
-.c-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 85vw;
-  height: 90vh;
-
-  color: rgb(7, 7, 7);
-
-  border-radius: 5px;
-  background-image: url('../assets/底2.jpg');
-  background-size: 100%;
-  z-index: 10001;
-  opacity: 1;
-  transition: .6s;
-  overflow: scroll;
-  overflow-x: hidden;
-}
 
 
 
@@ -1167,10 +1124,6 @@ h3 {
 
   }
 
-  h2 {
-    margin: 0 0 10px;
-    padding: 0;
-  }
 
   /* The actual timeline (the vertical ruler) */
   .timeline {
@@ -1178,7 +1131,8 @@ h3 {
     max-width: 1200px;
     /* margin: 1rem auto; */
     cursor: pointer;
-    margin-bottom: 3rem;
+
+    margin-top: 0rem;
   }
 
   /* The actual timeline (the vertical ruler) */
@@ -1190,9 +1144,10 @@ h3 {
     top: 0;
     bottom: 0;
     /* left: 50%; */
-    margin-left: 2rem;
+    margin-left: 1.2rem;
     z-index: 0;
-
+    margin-bottom: 3rem;
+    opacity: .6;
   }
 
   /* Container around content */
@@ -1213,8 +1168,9 @@ h3 {
     border: 2px solid #FFF;
     top: 200px;
     border-radius: 50%;
-    z-index: 1;
-    margin-left: 2rem;
+    z-index: 999;
+    margin-left: 1.2rem;
+    opacity: .6;
   }
 
   .container:hover::after {
@@ -1229,6 +1185,18 @@ h3 {
   .computer1 {
     display: none;
   }
+
+
+
+  .timeline .time {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+  }
 }
 
 .c-modal {
@@ -1239,18 +1207,23 @@ h3 {
   left: 0;
   margin: auto;
   width: 85vw;
-  height: 85vh;
-
+  height: 80vh;
+  padding: 2rem;
   color: rgb(7, 7, 7);
 
   border-radius: 5px;
   background-image: url('../assets/底2.jpg');
-  background-size: 100%;
+  background-size: cover;
   z-index: 10001;
   opacity: 1;
   transition: .6s;
   overflow: scroll;
-  overflow-x: hidden;
+
+}
+
+h2 {
+  text-align: left;
+
 }
 </style>
  

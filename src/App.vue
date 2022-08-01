@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <!-- <Header /> -->
+        <Header />
         <Banner />
         <Intro />
         <Section />
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-// import Header from '@/components/Header.vue'
+import Header from '@/components/Header.vue'
 // import Banner2 from '@/components/banner2.vue'
 import Banner from '@/components/Banner.vue'
 import Intro from '@/components/Intro.vue'
@@ -28,7 +28,7 @@ import Footer from '@/components/Footer.vue'
 export default {
     name: 'App',
     components: {
-        // Header,
+        Header,
         Banner,
         Intro,
         Section,
@@ -42,8 +42,10 @@ export default {
 </script>
 
 <style>
-html,
-body,
+html {}
+
+body {}
+
 div,
 span,
 applet,
@@ -189,65 +191,86 @@ table {
     border-spacing: 0;
 }
 
-h3,
-h4,
-p {
-    line-height: 1.8rem;
-}
+
 
 #app {
     font-family: 華康古印體, '華康愛情體W5', 華康仿宋體, 宋體, 蘋果儷中黑, 華康粗黑體, 微軟正黑體, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    overflow: hidden;
-}
-</style>
 
-<style>
+
+}
+
 * {
+
     scroll-behavior: smooth;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem !important;
+}
+
+h1 {
+    font-size: 4rem !important;
 }
 
 h2 {
-    text-align: center;
-
-    font-weight: bold;
-    letter-spacing: 6px;
-    padding: 6px 0;
+    font-size: 3.6rem !important;
 }
 
 h3 {
-    display: -webkit-box;
-    overflow: hidden;
-    font-size: 1.2rem;
-    text-align: left;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-height: 30px;
-    max-height: 50px;
-    margin: auto;
-    padding: 1rem 0 1rem 0.3rem;
+    font-size: 3rem !important;
+
 }
 
-h4 {
-    display: -webkit-box;
-    overflow: hidden;
-    font-size: 1.2rem;
-    text-align: left;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-height: 30px;
-    max-height: 55px;
-    margin: auto;
-    padding-left: 0.5rem;
+h4 {}
+
+
+@media screen and (max-width: 768px) {
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    h1 {
+        font-size: 3.8rem !important;
+    }
+
+    h2 {
+        font-size: 3.2rem !important;
+    }
+
+    h3 {
+        font-size: 2.4rem !important;
+
+    }
+
+    h4 {}
 }
+
+
+@media screen and (max-width: 600px) {
+
+    p {
+        font-size: 0.9rem !important;
+    }
+
+    h1 {
+        font-size: 3.2rem !important;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+
+    h3 {
+        font-size: 1.8rem !important;
+    }
+
+    h4 {}
+}
+
 
 img,
 picture {

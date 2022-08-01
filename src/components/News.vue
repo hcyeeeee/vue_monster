@@ -1,7 +1,7 @@
 <template>
     <div class="layout " id="section_news">
         <div>
-            <h1 class="title pt-5">{{ title }}</h1>
+            <h2 class="title pt-5">{{ title }}</h2>
         </div>
         <div class="layout_grid layout_content">
 
@@ -18,7 +18,7 @@
             </div>
         </div>
         <hr>
-        <div class="layout_grid_inner container">
+        <div class="layout_grid_inner">
 
 
             <div class="layout_sort">
@@ -39,10 +39,7 @@
                                 <img src="../assets/台北異文地方工作室.png" alt="">
                             </a>
                         </div>
-                        <div class="row mt-3">
-                            <a href="https://bit.ly/3aYbCC2" target="blank"> <img class="col-5" src="../assets/buy.jpg"
-                                    alt=""> </a>
-                        </div>
+
                     </div>
 
                 </div>
@@ -58,15 +55,15 @@
 
                         <p>重新認識臺灣的過程中，最缺乏的一塊就是臺灣的妖怪神異文化。本書考察了49個臺灣妖怪神異，每個妖怪神異都包含：繪師重新賦予他們的圖像＋現代版極短篇故事＋詳盡的文獻與田野資料！讓妖怪神異與現代生活緊密相連。
                         </p>
-                        <div class="row mt-5 mt-sm-1">
-                            <a class="col-5" href="https://www.facebook.com/kiwifruitstudio" target="blank"> <img
-                                    src="../assets/奇異果文創.png" alt=""> </a>
-                            <a class="col-7" href="https://www.facebook.com/TPE.Legend" target="blank"> <img
-                                    src="../assets/台北異文地方工作室.png" alt=""> </a>
-                        </div>
-                        <div class="row mt-3 mb-5 ">
-                            <a href="https://www.books.com.tw/products/0010730758" target="blank"> <img class="col-5"
-                                    src="../assets/buy.jpg" alt=""> </a>
+                        <div class="icon">
+                            <div class="row mt-5 mt-sm-1">
+                                <a class="col-6 " href="https://www.facebook.com/kiwifruitstudio" target="blank">
+                                    <img src="../assets/奇異果文創.png" alt=""> </a>
+                                <a class="col-6 " href="https://www.facebook.com/TPE.Legend" target="blank"> <img
+                                        src="../assets/台北異文地方工作室.png" alt=""> </a>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -131,17 +128,7 @@ picture {
     margin: auto;
 }
 
-h4 {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-height: 30px;
-    max-height: 70px;
-    padding: 0 0.3rem;
-    text-align: center;
-}
+
 
 .layout_grid div div:nth-last-child(1) a {
     display: inline;
@@ -172,7 +159,7 @@ h4 {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .layout_content {
         grid-template-columns: 1fr;
         padding: 0rem 3rem
@@ -195,7 +182,7 @@ h4 {
 
 @media screen and (max-width: 1024px) {
     .layout_img_inner {
-        min-height: 200px;
+        min-height: 260px;
         min-width: 200px;
     }
 }
@@ -215,10 +202,6 @@ h4 {
 }
 
 
-h1 {
-    font-family: 華康古印體;
-    font-size: 70px;
-}
 
 hr {
     border: 2px solid rgb(0, 0, 0);
@@ -231,6 +214,7 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    padding: 3rem;
 }
 
 .layout_book {
@@ -247,11 +231,7 @@ hr {
     margin-bottom: 5rem;
 }
 
-h2 {
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-}
+
 
 a {
     color: black !important;
@@ -262,12 +242,12 @@ a {
 
 }
 
-p {
+/* p {
     height: fit-content;
     font-size: 20px;
     line-height: 36px;
     font-weight: 400;
-}
+} */
 
 .book {
     width: 200px;
@@ -287,7 +267,7 @@ p {
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
 }
@@ -298,9 +278,9 @@ p {
 
     .layout_grid_inner {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1rem;
-        padding: 0rem 3rem;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        padding: 3rem;
     }
 
     .book {
@@ -315,14 +295,26 @@ p {
         grid-gap: 2rem;
 
 
+
+    }
+
+    .layout_content {
+        padding: 2rem;
+        width: 100%;
+
     }
 
     .p {
         font-size: 24px;
+        height: 260px;
     }
 
     .news {
         height: 250px;
+    }
+
+    h2 {
+        font-size: 36px
     }
 
 }
@@ -333,7 +325,7 @@ p {
     .layout_grid_inner {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 1rem;
+        grid-gap: 3rem;
 
     }
 
@@ -362,6 +354,15 @@ p {
 
     .news {
         height: 250px;
+    }
+
+    h2 {
+        font-size: 3rem;
+
+    }
+
+    .layout_sort {
+        margin-bottom: -20px;
     }
 
 }

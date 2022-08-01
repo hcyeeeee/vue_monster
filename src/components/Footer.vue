@@ -42,10 +42,7 @@ export default {
     justify-content: center;
 }
 
-p {
-    text-align: left;
 
-}
 
 .end {
     display: flex;

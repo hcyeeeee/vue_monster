@@ -10,9 +10,9 @@
                     <div :class="[{ isQuiz: start }]"></div>
                     <div class="game__desc" v-if="!start">
                         <div class="title">
-                            <h1 class="titleh1">鬼怪愛情診斷書</h1>
-                            <h2 class="titleh2">你的愛情觀屬於哪種台灣鬼怪?</h2>
-                            <p class="titlep">農曆七月，也是俗稱的「鬼月」，講到妖魔鬼怪，你第一個會聯想到什麼？是殭屍、魔神仔，還是紅衣小女孩？<br>
+                            <h3 class="">鬼怪愛情診斷書<br>你的愛情觀屬於哪種台灣鬼怪?</h3>
+
+                            <p class="">農曆七月，也是俗稱的「鬼月」，講到妖魔鬼怪，你第一個會聯想到什麼？是殭屍、魔神仔，還是紅衣小女孩？
 
                                 現在就來做個心理測驗，看看你在愛情中，屬於哪個台灣鬼怪？
                             </p>
@@ -33,8 +33,8 @@
                             <!-- <img src="" class="city" alt="" /> -->
 
                             <div class="ans__wrap row " v-show="q_no == 0">
-                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
-                                <div class="ans col-6">
+                                <img class="img__wrap col-6" src="../assets/Q4pic.jpg">
+                                <div class=" ans col-6">
                                     <label>
                                         <input @click="next" type="radio" name="quesA" v-model="quesA"
                                             :value="q_data[q_no].value[0]" />
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="ans__wrap row" v-show="q_no == 1">
-                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <img class="img__wrap col-6" src="../assets/Q1pic.jpg">
                                 <div class="ans col-6">
                                     <label>
                                         <input @click="next" type="radio" name="quesB" v-model="quesB"
@@ -85,8 +85,8 @@
                             </div>
 
                             <div class="ans__wrap row" v-show="q_no == 2">
-                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
-                                <div class="ans col-6">
+                                <img class="img__wrap col-6" src="../assets/Q2pic.jpg">
+                                <div class=" ans col-6">
                                     <label>
                                         <input @click="next" type="radio" name="quesC" v-model="quesC"
                                             :value="q_data[q_no].value[0]" />
@@ -111,7 +111,7 @@
                             </div>
 
                             <div class="ans__wrap row" v-show="q_no == 3">
-                                <img class="img__wrap col-6" src="../assets/01-日月潭白鹿.jpg" alt="">
+                                <img class="img__wrap col-6" src="../assets/Q3pic.jpg" alt="">
                                 <div class="ans col-6">
                                     <label>
                                         <input @click="next" type="radio" name="quesD" v-model="quesD"
@@ -145,15 +145,15 @@
                     </div>
                 </div>
                 <!-- end會到此 -->
-                <div id="result_img" class=" result  " v-show="result_">
+                <div id="result_img" class=" result computer " v-show="result_">
                     <p id="sum">{{ quesA }}+{{ quesB }}+{{ quesC }}+{{ quesD }}</p>
                     <img src="" class="result__img" />
                     <div class="resultbtn row">
-                        <a class="col-4" href="#intro"><img src="../assets/台灣神怪知多少btn.png" alt="" />
+                        <a class="col-12 col-md-4 " href="#intro"><img src="../assets/台灣神怪知多少btn.png" alt="" />
                         </a>
-                        <a class="col-4" href="#faq"><img src="../assets/QAbtn.png" alt="" />
+                        <a class="col-12 col-md-4" href="#faq"><img src="../assets/QAbtn.png" alt="" />
                         </a>
-                        <a class="col-4" href=""><img src="../assets/重新測驗btn.png" alt="" />
+                        <a class="col-12 col-md-4" href=""><img src="../assets/重新測驗btn.png" alt="" />
                         </a>
                     </div>
                     <!-- <div class="share row">
@@ -174,6 +174,7 @@
                         </a>
                     </div> -->
                 </div>
+
             </div>
 
 
@@ -195,6 +196,13 @@ export default {
       result_img4: require("../assets/ans4.png"),
       result_img5: require("../assets/ans5.png"),
       result_img6: require("../assets/ans6.png"),
+        result_img7: require("../assets/ma1.png"),
+      result_img8: require("../assets/ma2.png"),
+      result_img9: require("../assets/ma3.png"),
+      result_img10: require("../assets/ma4.png"),
+      result_img11: require("../assets/ma5.png"),
+      result_img12: require("../assets/ma6.png"),
+
 
       start: false,
       end: true,
@@ -212,9 +220,7 @@ export default {
       q_data: [
 
         {
-          url: require("../assets/monster1.png"),
-          img: require("../assets/monster1.png"),
-
+       
           ques: "遇到喜歡的對象時，你會怎麼做？",
           ans: [
             " 默默暗戀對方，不敢行動 ",
@@ -295,13 +301,15 @@ export default {
       setTimeout(() => {
         let sum = document.querySelector("#sum").innerHTML.split("+"); // 將所有值以符號＋切開 可以看137行的p標籤
         let result = sum.reduce((a, b) => Number(a) + Number(b)); // 將所有值轉成數字再加總
-
-        this.end = false;
+var W = window.innerWidth;
+console.log(window.innerWidth);
+this.end = false;
         this.result_ = true;
-
+if(W > 768){
         if (result <= 7) {
           document.querySelector("#result_img > img").src = this.result_img1;
-        } else if (result >= 8 && result <= 11) {
+        }
+         else if (result >= 8 && result <= 11) {
           document.querySelector("#result_img > img").src = this.result_img2;
         } else if (result >= 12 && result <= 15) {
           document.querySelector("#result_img > img").src = this.result_img3;
@@ -312,7 +320,22 @@ export default {
         } else {
           document.querySelector("#result_img > img").src = this.result_img6;
         }
-      }, 1000);
+      }else{
+         if (result <= 7) {
+          document.querySelector("#result_img > img").src = this.result_img7;
+        }
+         else if (result >= 8 && result <= 11) {
+          document.querySelector("#result_img > img").src = this.result_img8;
+        } else if (result >= 12 && result <= 15) {
+          document.querySelector("#result_img > img").src = this.result_img9;
+        } else if (result >= 16 && result <= 19) {
+          document.querySelector("#result_img > img").src = this.result_img10;
+        } else if (result >= 20 && result <= 23) {
+          document.querySelector("#result_img > img").src = this.result_img11;
+        } else {
+          document.querySelector("#result_img > img").src = this.result_img12;
+        }
+      }},1000);
     },
 
     getLocalUrl() {
@@ -350,45 +373,130 @@ export default {
 @media screen and (max-width: 1000px) {
     .Q {
         margin: auto;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Q {
+        margin: auto;
         width: 500px;
     }
 }
+
 
 /* title */
 .title {
     width: fit-content;
     z-index: 99;
-    top: 50px;
+    top: 10px;
     margin: auto;
     position: relative;
     max-width: 1000px;
+    padding: 1rem;
 
 }
 
-.titleh1 {
-    font-family: "華康古印體";
-    color: #000000;
-    text-align: left;
-    margin-bottom: -4px;
-}
-
-.titleh2 {
-    font-family: "華康古印體";
-    color: #000000;
-    text-align: left;
-    margin-bottom: -4px;
+h3 {
+    text-align: start;
 }
 
 
-.titlep {
-    font-family: "華康古印體";
-    color: #000000;
-    text-align: left;
-    margin-bottom: -4px;
-    font-size: 19px;
+
+
+@media screen and (max-width: 1000px) {
+    .title {
+        width: fit-content;
+        z-index: 99;
+
+        margin: auto;
+        position: relative;
+        max-width: 800px;
+
+        padding: 0rem 2rem;
+
+    }
+
+    /* .titleh1 {
+        font-family: "華康古印體";
+        color: #000000;
+        text-align: left;
+        font-size: 2rem;
+        margin-bottom: -4px;
+    }
+
+    .titleh2 {
+        font-family: "華康古印體";
+        color: #000000;
+        text-align: left;
+        font-size: 2rem;
+        margin-bottom: -4px;
+    }
+
+
+    .titlep {
+        font-family: "華康古印體";
+        color: #000000;
+        text-align: left;
+        margin-bottom: -4px;
+        font-size: 16px;
+
+
+    } */
 
 
 }
+
+@media screen and (max-width: 600px) {
+    .Q {
+        margin: auto;
+        width: 500px;
+        font-size: 50px
+    }
+
+
+    .title {
+        width: fit-content;
+        z-index: 99;
+
+        margin: auto;
+        position: relative;
+        /* max-width: 500px; */
+
+        padding: 0rem 2rem;
+    }
+
+    /* .titleh1 {
+        font-family: "華康古印體";
+        color: #000000;
+        text-align: left;
+        font-size: 2rem;
+        margin-bottom: -4px;
+
+    }
+
+    .titleh2 {
+        font-family: "華康古印體";
+        color: #000000;
+        text-align: left;
+        font-size: 1.6rem;
+        margin-bottom: -4px;
+
+    }
+
+
+    .titlep {
+        display: none;
+
+
+    }
+ */
+
+
+}
+
+
+
 
 /* titleend */
 .startbtn {
@@ -399,12 +507,13 @@ export default {
     display: block;
     transition: 0.3s;
     filter: contrast(0.7);
-    font-size: 22px;
+    font-size: 20px;
     background-color: #333333;
     width: fit-content;
     margin: auto;
     cursor: pointer;
     margin-top: 20px;
+    overflow: auto !important;
 }
 
 
@@ -1011,13 +1120,14 @@ label:hover {
 }
 
 .game__quiz .ans input:checked:after {
-    background-color: #ee632d;
+    background-color: transparent;
     font-family: "華康愛情體W5";
 }
 
 .game__quiz .ans label {
     font-weight: 500;
     display: flex;
+
 }
 
 .game__quiz .back {
@@ -1086,8 +1196,12 @@ label:hover {
 }
 
 .result a {
-    margin-top: -6rem;
-    padding: 1rem 1rem 3rem;
+
+    padding: 1rem 1rem 2rem;
+}
+
+.resultbtn {
+    margin-top: -100px
 }
 
 .result .top {
@@ -1398,7 +1512,7 @@ label:hover {
     }
 
     .game__desc p {
-        margin: 0 0 30px;
+
         font-size: 1rem;
     }
 
@@ -1419,6 +1533,13 @@ label:hover {
     .game__quiz {
         width: 100%;
     }
+
+
+    .game__quiz .Q {
+        width: 500px;
+        margin: auto;
+    }
+
 
     .game__quiz .num {
         font-size: 4rem;
@@ -1462,7 +1583,7 @@ label:hover {
     }
 
     .result {
-        padding: 140px 0 50px;
+        padding: 100px 50px;
     }
 
     .result .talk {
@@ -1476,7 +1597,7 @@ label:hover {
     }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
     .result .top__img {
         width: 100%;
     }
@@ -1493,6 +1614,102 @@ label:hover {
         right: 44%;
         top: -25%;
     }
+
+    .game__wrap {
+        min-height: 800px !important;
+    }
+
+    .bg--main {
+        min-height: 300px !important;
+    }
+
+    .game__desc {
+        font-size: 1rem;
+    }
+
+    .game__desc p {
+        margin: 0 0 30px;
+        font-size: 1rem;
+    }
+
+    .chBtn .game__desc span,
+    .game__desc .chBtn,
+    .game__desc .chBtn span {
+        font-size: 1rem;
+        max-width: 200px;
+    }
+
+    .game__desc .arrow__right--main {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        top: 1px;
+    }
+
+    .game__quiz {
+        width: 100%;
+    }
+
+
+    .game__quiz .Q {
+        width: 350px;
+        margin: auto;
+    }
+
+
+    .game__quiz .num {
+        font-size: 2rem;
+    }
+
+    .game__quiz .num span {
+        font-size: 2rem;
+    }
+
+    .game__quiz .ques {
+        font-size: 1.75rem;
+        word-break: unset;
+
+
+    }
+
+    .game__quiz .ans {
+        font-size: 1.125rem;
+        margin: 0;
+    }
+
+    .game__quiz .ans input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .game__quiz .ans input:after {
+        width: 18px;
+        height: 18px;
+        top: 0;
+        left: 0;
+    }
+
+    .game__quiz .back span {
+        font-size: 1rem;
+        margin-left: 8px;
+    }
+
+    .game__quiz .back:before {
+        width: 9px;
+        height: 14px;
+        display: none;
+    }
+
+    .game__quiz .ans label {
+        font-weight: 500;
+        display: flex;
+        width: 350px;
+
+        margin: auto;
+        margin: 1.8rem auto;
+
+    }
+
 }
 
 .chBtn,
@@ -1577,6 +1794,16 @@ label:hover {
 }
 
 
+@media screen and (max-width:500px) {
+
+    .bg--main {
+        background-image: url("../assets/banner2.jpg");
+        height: 10px;
+        background-size: cover;
+    }
+
+
+}
 
 
 
