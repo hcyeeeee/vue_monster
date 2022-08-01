@@ -46,6 +46,11 @@ html {}
 
 body {}
 
+.row {
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+}
+
 div,
 span,
 applet,
@@ -221,6 +226,7 @@ h2 {
 
 h3 {
     font-size: 3rem !important;
+    padding: 1rem 0;
 
 }
 

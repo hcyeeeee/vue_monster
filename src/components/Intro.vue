@@ -393,7 +393,7 @@ if(W > 768){
     margin: auto;
     position: relative;
     max-width: 1000px;
-    padding: 1rem;
+    padding: 3rem;
 
 }
 
@@ -413,36 +413,9 @@ h3 {
         position: relative;
         max-width: 800px;
 
-        padding: 0rem 2rem;
+        padding: 0rem 3rem;
 
     }
-
-    /* .titleh1 {
-        font-family: "華康古印體";
-        color: #000000;
-        text-align: left;
-        font-size: 2rem;
-        margin-bottom: -4px;
-    }
-
-    .titleh2 {
-        font-family: "華康古印體";
-        color: #000000;
-        text-align: left;
-        font-size: 2rem;
-        margin-bottom: -4px;
-    }
-
-
-    .titlep {
-        font-family: "華康古印體";
-        color: #000000;
-        text-align: left;
-        margin-bottom: -4px;
-        font-size: 16px;
-
-
-    } */
 
 
 }
@@ -995,10 +968,10 @@ input {
     top: -2px;
 }
 
-.game__wrap {
+/* .game__wrap {
     overflow: hidden;
     height: 100vh;
-}
+} */
 
 @-webkit-keyframes man {
     0% {
@@ -1783,13 +1756,11 @@ label:hover {
 
 .bg--main {
     background-image: url("../assets/banner2.jpg");
-    height: 300px;
     background-size: cover;
 }
 
 .bg--main2 {
     background-image: url("../assets/banner1.jpg");
-    height: 100%;
     background-size: cover;
 }
 
@@ -1798,7 +1769,6 @@ label:hover {
 
     .bg--main {
         background-image: url("../assets/banner2.jpg");
-        height: 10px;
         background-size: cover;
     }
 
