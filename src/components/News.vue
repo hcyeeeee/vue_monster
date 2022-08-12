@@ -1,77 +1,82 @@
 <template>
     <div class="layout " id="section_news">
-        <div>
-            <h2 class="title pt-5">{{ title }}</h2>
-        </div>
-        <div class="layout_grid layout_content">
-
-            <div class="mt-3 mb-3" v-for="(news, index) of newsInfo" :key="index">
-                <a :href="'https://www.ftvnews.com.tw/news/detail/' + news.ID" target="_blank">
-                    <div class="layout_grid_inner_content">
-                        <div class="layout_img_inner">
-                            <img class="news" loading="lazy" :src="news.Image" />
-                        </div>
-                        <h4 class="mt-2">{{ news.Title }}</h4>
-                    </div>
-                </a>
-
+        <div class="bg">
+            <div>
+                <h2 class="title pt-5 pb-3">意猶未盡?<br>瞭解更多</h2>
+                <h2 class="title2 pt-5 pb-3">意猶未盡?瞭解更多</h2>
             </div>
-        </div>
-        <hr>
-        <div class="layout_grid_inner">
+            <div class="layout_grid layout_content">
 
-
-            <div class="layout_sort">
-                <h2>尋妖誌：島嶼妖怪文化之旅</h2>
-                <div class="layout_book">
-                    <div>
-                        <img class="book " src="../assets/book1.png" loading="lazy" />
-                    </div>
-                    <div class="bookcontent">
-                        <p>透過台灣民俗與生活記憶中有關妖怪傳說的記憶，採取行旅與踏查的方式尋找台灣妖怪的足跡，其中規劃十一條走訪妖怪的路線，將口傳或文獻所載的妖怪一一揭露其神祕面相，提供可實際按圖索驥的便利性，並搭配行程中的小旅行，但最後呼籲，島嶼千年靈氣，妖怪法力高強，懇請膽小者勿試！
-                        </p>
-                        <div class="row mt-3 mt-sm-1 pt-3 pt-sm-0">
-
-                            <a class="col-5" href="https://www.facebook.com/morningstarpublishing" target="blank">
-                                <img src="../assets/晨星出版社.png" alt="">
-                            </a>
-                            <a class="col-7" href="https://www.facebook.com/TPE.Legend" target="blank">
-                                <img src="../assets/台北異文地方工作室.png" alt="">
-                            </a>
+                <div class="" v-for="(news, index) of newsInfo" :key="index">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + news.ID" target="_blank">
+                        <div class="layout_grid_inner_content">
+                            <div class="layout_img_inner">
+                                <img class="news" loading="lazy" :src="news.Image" alt="news" />
+                            </div>
+                            <p class="">{{ news.Title }}</p>
                         </div>
-
-                    </div>
+                    </a>
 
                 </div>
             </div>
+            <hr>
+            <div class="layout_grid_inner">
 
-            <div class="layout_sort">
-                <h2>唯妖論：臺灣神怪本事</h2>
-                <div class="layout_book">
-                    <div>
-                        <img class="book" src="../assets/book2.png" loading="lazy" />
-                    </div>
-                    <div class="bookcontent">
 
-                        <p>重新認識臺灣的過程中，最缺乏的一塊就是臺灣的妖怪神異文化。本書考察了49個臺灣妖怪神異，每個妖怪神異都包含：繪師重新賦予他們的圖像＋現代版極短篇故事＋詳盡的文獻與田野資料！讓妖怪神異與現代生活緊密相連。
-                        </p>
-                        <div class="icon">
-                            <div class="row mt-5 mt-sm-1">
-                                <a class="col-6 " href="https://www.facebook.com/kiwifruitstudio" target="blank">
-                                    <img src="../assets/奇異果文創.png" alt=""> </a>
-                                <a class="col-6 " href="https://www.facebook.com/TPE.Legend" target="blank"> <img
-                                        src="../assets/台北異文地方工作室.png" alt=""> </a>
+                <div class="layout_sort">
+                    <h3>尋妖誌：島嶼妖怪文化之旅</h3>
+                    <div class="layout_book">
 
+
+                        <a href="https://bit.ly/3aYbCC2" target="blank">
+                            <img class="book " src="../assets/book1.png" loading="lazy" />
+
+                        </a>
+                        <div class="bookcontent">
+                            <p>透過台灣民俗與生活記憶中有關妖怪傳說的記憶，採取行旅與踏查的方式尋找台灣妖怪的足跡，其中規劃十一條走訪妖怪的路線，將口傳或文獻所載的妖怪一一揭露其神祕面相，提供可實際按圖索驥的便利性，並搭配行程中的小旅行，但最後呼籲，島嶼千年靈氣，妖怪法力高強，懇請膽小者勿試！
+                            </p>
+                            <div class="layout_icon">
+
+                                <a href="https://www.facebook.com/morningstarpublishing" target="blank">
+                                    <img src="../assets/晨星出版社.png" alt="晨星出版社">
+                                </a>
+                                <a href="https://www.facebook.com/TPE.Legend" target="blank">
+                                    <img src="../assets/台北異文地方工作室.png" alt="台北異文地方工作室">
+                                </a>
                             </div>
 
                         </div>
+
                     </div>
                 </div>
-            </div>
 
+                <div class="layout_sort">
+                    <h3>唯妖論：臺灣神怪本事</h3>
+                    <div class="layout_book">
+                        <a href="https://www.books.com.tw/products/0010730758" target="blank">
+                            <img class="book" src="../assets/book2.png" loading="lazy" /></a>
+
+                        <div class="bookcontent">
+
+                            <p>重新認識臺灣的過程中，最缺乏的一塊就是臺灣的妖怪神異文化。本書考察了49個臺灣妖怪神異，每個妖怪神異都包含：繪師重新賦予他們的圖像＋現代版極短篇故事＋詳盡的文獻與田野資料！讓妖怪神異與現代生活緊密相連。
+                            </p>
+                            <div class="layout_icon">
+
+                                <a href="https://www.facebook.com/kiwifruitstudio" target="blank">
+                                    <img src="../assets/奇異果文創.png" alt="奇異果文創"> </a>
+                                <a href="https://www.facebook.com/TPE.Legend" target="blank"> <img
+                                        src="../assets/台北異文地方工作室.png" alt="台北異文地方工作室"> </a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-
 
 
 
@@ -82,7 +87,7 @@
 export default {
     data() {
         return {
-            title: '意猶未盡？瞭解更多',
+
             newsInfo: [],
         }
     },
@@ -107,11 +112,23 @@ export default {
 
 <style scoped>
 .layout {
-    background-image: url(../assets/b3.png);
-    background-size: cover;
-    font-family: '華康愛情體W5';
-    max-height: 100%;
+    background-image: url(../assets/底2.jpg);
 
+
+
+
+
+}
+
+a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bg {
+    max-width: 1000px;
+    margin: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -138,7 +155,6 @@ picture {
 
 .layout_grid p {
     max-width: 600px;
-    margin: 1rem auto;
 }
 
 .layout_grid {
@@ -159,12 +175,6 @@ picture {
     }
 }
 
-@media screen and (max-width: 500px) {
-    .layout_content {
-        grid-template-columns: 1fr;
-        padding: 0rem 3rem
-    }
-}
 
 
 
@@ -180,7 +190,7 @@ picture {
     height: 180px;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .layout_img_inner {
         min-height: 260px;
         min-width: 200px;
@@ -199,7 +209,7 @@ picture {
     }
 
 
-}
+} */
 
 
 
@@ -214,7 +224,7 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .layout_book {
@@ -242,17 +252,13 @@ a {
 
 }
 
-/* p {
-    height: fit-content;
-    font-size: 20px;
-    line-height: 36px;
-    font-weight: 400;
-} */
 
 .book {
-    width: 200px;
+    width: 220px;
+    width: 100%;
+    height: 230px;
     padding: 0;
-    transition: 1s;
+
 
 }
 
@@ -260,15 +266,11 @@ a {
     margin-bottom: 5rem;
 }
 
-@media screen and (max-width: 1200px) {
+.layout_icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
 
-    .layout_sort {
-        margin-bottom: 12rem;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
 
 }
 
@@ -276,62 +278,11 @@ a {
 
 @media screen and (max-width: 1024px) {
 
-    .layout_grid_inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
-        padding: 3rem;
-    }
 
     .book {
-        width: 250px;
-        transition: 1s;
-
-    }
-
-    .layout_book {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        width: 200px;
 
 
-
-    }
-
-    .layout_content {
-        padding: 2rem;
-        width: 100%;
-
-    }
-
-    .p {
-        font-size: 24px;
-        height: 260px;
-    }
-
-    .news {
-        height: 250px;
-    }
-
-    h2 {
-        font-size: 36px
-    }
-
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .layout_grid_inner {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-
-    }
-
-    .book {
-        width: 300px;
-        transition: 1s;
 
     }
 
@@ -341,35 +292,146 @@ a {
         grid-gap: 1rem;
 
 
+
     }
 
+    .layout_content {
+        padding: 2rem;
+        width: 100%;
+        grid-gap: 2rem;
 
-
-    p {
-
-        font-size: 20px;
-        line-height: 36px;
-        font-weight: 400;
     }
+
 
     .news {
-        height: 250px;
+        height: 220px;
     }
 
-    h2 {
-        font-size: 3rem;
+    .layout_icon {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+
 
     }
 
-    .layout_sort {
-        margin-bottom: -20px;
-    }
 
 }
 
 
-.h4 {
-    font-size: 10px;
+@media screen and (max-width: 600px) {
+
+    .layout_grid_inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        padding: 0rem 3rem;
+
+    }
+
+    .book {}
+
+
+
+    .layout_icon {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+
+
+
+    }
+
+    .news {
+        height: 220px;
+    }
+
+    .layout_sort {}
+
+    p {
+        font-size: 1.4rem !important;
+        line-height: 2.2rem;
+
+
+    }
+
+    h3 {
+        font-size: 2.5rem !important;
+    }
+
+
+}
+
+
+.title {
+    display: none;
+}
+
+.title2 {
+    display: block;
+}
+
+
+@media screen and (max-width: 500px) {
+    .layout_content {
+        grid-template-columns: 1fr;
+        padding: 1rem 3rem
+    }
+
+    h2 {
+        color: rgb(6, 6, 6);
+
+    }
+
+    p {
+        font-size: 1.2rem !important;
+        line-height: 2rem;
+        text-align: left;
+        padding: 0rem;
+
+    }
+
+    .news {
+        height: 200px;
+    }
+
+    .layout_sort {
+        margin-bottom: 20px;
+    }
+
+    .layout_icon {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        text-align: left;
+        font-size: 2.4rem !important;
+
+    }
+
+    .book {
+        width: 180px;
+
+
+
+    }
+
+    .title2 {
+        display: none;
+    }
+
+    .title {
+        display: block;
+    }
+
+
+}
+
+h3 {}
+
+h3 {
+    font-size: 2.4rem !important;
 
 }
 </style>

@@ -5,7 +5,7 @@
         <section class=" bg--main game__wrap ">
 
 
-            <div class="row">
+            <div class="row" id="aaa">
                 <div v-show="end">
                     <div :class="[{ isQuiz: start }]"></div>
                     <div class="game__desc" v-if="!start">
@@ -16,25 +16,24 @@
 
                                 現在就來做個心理測驗，看看你在愛情中，屬於哪個台灣鬼怪？
                             </p>
-                            <a class="startbtn" id="" v-on:click="startQuiz(); start = !start; ">立即檢測</a>
+                            <a class="startbtn" href="#game" v-on:click="startQuiz(); start = !start; ">立即檢測</a>
                         </div>
                     </div>
 
 
-                    <div class="row mt-5  game">
+                    <div class=" mt-5  game">
                         <div class="game__quiz">
                             <div class="Q">
-                                <div class="num">
-                                    第<span>{{ q_data[q_no].t }}</span>則 情境題
+                                <div class="num">第<span>{{ q_data[q_no].t }}</span>則 情境題
                                 </div>
                                 <div class="ques">{{ q_data[q_no].ques }}</div>
                             </div>
 
-                            <!-- <img src="" class="city" alt="" /> -->
 
-                            <div class="ans__wrap row " v-show="q_no == 0">
-                                <img class="img__wrap col-6" src="../assets/Q4pic.jpg">
-                                <div class=" ans col-6">
+
+                            <div class="ans__wrap  " v-show="q_no == 0">
+                                <img class="img__wrap" src="../assets/Q4pic.jpg" alt="Q4">
+                                <div class=" ans ">
                                     <label>
                                         <input @click="next" type="radio" name="quesA" v-model="quesA"
                                             :value="q_data[q_no].value[0]" />
@@ -58,9 +57,9 @@
                                 </div>
                             </div>
 
-                            <div class="ans__wrap row" v-show="q_no == 1">
-                                <img class="img__wrap col-6" src="../assets/Q1pic.jpg">
-                                <div class="ans col-6">
+                            <div class="ans__wrap " v-show="q_no == 1">
+                                <img class="img__wrap   " src="../assets/Q1pic.jpg" alt="Q1">
+                                <div class="ans   ">
                                     <label>
                                         <input @click="next" type="radio" name="quesB" v-model="quesB"
                                             :value="q_data[q_no].value[0]" />
@@ -84,9 +83,9 @@
                                 </div>
                             </div>
 
-                            <div class="ans__wrap row" v-show="q_no == 2">
-                                <img class="img__wrap col-6" src="../assets/Q2pic.jpg">
-                                <div class=" ans col-6">
+                            <div class="ans__wrap " v-show="q_no == 2">
+                                <img class="img__wrap   " src="../assets/Q2pic.jpg" alt="Q2">
+                                <div class=" ans   ">
                                     <label>
                                         <input @click="next" type="radio" name="quesC" v-model="quesC"
                                             :value="q_data[q_no].value[0]" />
@@ -110,9 +109,9 @@
                                 </div>
                             </div>
 
-                            <div class="ans__wrap row" v-show="q_no == 3">
-                                <img class="img__wrap col-6" src="../assets/Q3pic.jpg" alt="">
-                                <div class="ans col-6">
+                            <div class="ans__wrap" v-show="q_no == 3">
+                                <img class="img__wrap   " src="../assets/Q3pic.jpg" alt="Q3">
+                                <div class="ans   ">
                                     <label>
                                         <input @click="next" type="radio" name="quesD" v-model="quesD"
                                             :value="q_data[q_no].value[0]" />
@@ -147,33 +146,15 @@
                 <!-- end會到此 -->
                 <div id="result_img" class=" result computer " v-show="result_">
                     <p id="sum">{{ quesA }}+{{ quesB }}+{{ quesC }}+{{ quesD }}</p>
-                    <img src="" class="result__img" />
-                    <div class="resultbtn row">
-                        <a class="col-12 col-md-4 " href="#intro"><img src="../assets/台灣神怪知多少btn.png" alt="" />
-                        </a>
-                        <a class="col-12 col-md-4" href="#faq"><img src="../assets/QAbtn.png" alt="" />
-                        </a>
-                        <a class="col-12 col-md-4" href=""><img src="../assets/重新測驗btn.png" alt="" />
-                        </a>
+                    <img src="" class="result__img" alt="result" />
+                    <div class="btn__result">
+                        <a class="" href="#section">台灣神怪知多少</a>
+                        <a class="" href="#faq">台灣神怪Ｑ＆Ａ</a>
+                        <a class="" href="">重新測驗 </a>
                     </div>
-                    <!-- <div class="share row">
-                        <a class="col-4" target="_blank"
-                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Ftaiwanghost%2F&amp;src=sdkpreparse"><img
-                                src="../assets/fb.png" alt="" />
-                        </a>
-                        <a class="col-3" href="#intro">
-                            <img src="../assets/ig.png" alt="" />
-                        </a>
-                        <a class="col-4"
-                            href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/taiwanghost/"
-                            target="_blank">
-                            <img src="../assets/line.png" alt="" />
-                        </a>
-                        <a class="col-4" target="_blank" @click="getLocalUrl">
-                            <img src="../assets/share.png" alt="" />
-                        </a>
-                    </div> -->
+
                 </div>
+
 
             </div>
 
@@ -190,18 +171,18 @@
 export default {
   data() {
     return {
-      result_img1: require("../assets/ans1.png"),
-      result_img2: require("../assets/ans2.png"),
-      result_img3: require("../assets/ans3.png"),
-      result_img4: require("../assets/ans4.png"),
-      result_img5: require("../assets/ans5.png"),
-      result_img6: require("../assets/ans6.png"),
-        result_img7: require("../assets/ma1.png"),
-      result_img8: require("../assets/ma2.png"),
-      result_img9: require("../assets/ma3.png"),
-      result_img10: require("../assets/ma4.png"),
-      result_img11: require("../assets/ma5.png"),
-      result_img12: require("../assets/ma6.png"),
+      result_img1: require("../assets/ans1.jpg"),
+      result_img2: require("../assets/ans2.jpg"),
+      result_img3: require("../assets/ans3.jpg"),
+      result_img4: require("../assets/ans4.jpg"),
+      result_img5: require("../assets/ans5.jpg"),
+      result_img6: require("../assets/ans6.jpg"),
+        result_img7: require("../assets/ma1.jpg"),
+      result_img8: require("../assets/ma2.jpg"),
+      result_img9: require("../assets/ma3.jpg"),
+      result_img10: require("../assets/ma4.jpg"),
+      result_img11: require("../assets/ma5.jpg"),
+      result_img12: require("../assets/ma6.jpg"),
 
 
       start: false,
@@ -355,8 +336,59 @@ if(W > 768){
 </script>
 <style scoped>
 * {
-    font-family: "華康愛情體W5";
+    font-family: "font1";
 }
+
+
+
+
+.btn__result {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: auto;
+    padding: 1rem 1rem 5rem 1rem;
+    font-size: 1.5rem;
+
+}
+
+.btn__result>a {
+    width: fit-content;
+    padding: 0.5rem 3rem;
+    color: #333333;
+    text-decoration: none;
+    background-color: rgb(234, 225, 54);
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn__result {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        margin: auto;
+        padding: 1rem 1rem 5rem 1rem;
+        font-size: 1.5rem;
+
+    }
+
+    .btn__result>a {
+        width: fit-content;
+        padding: 0.5rem 3rem;
+
+        color: #333333;
+        text-decoration: none;
+        margin: auto;
+        margin-top: 2rem;
+        width: 300px;
+        background-color: rgb(234, 225, 54);
+
+    }
+}
+
 
 .layout {
     width: 100%;
@@ -366,7 +398,9 @@ if(W > 768){
 
 
 .Q {
+    display: block;
     margin: auto;
+    width: auto;
     width: 820px;
 }
 
@@ -393,7 +427,7 @@ if(W > 768){
     margin: auto;
     position: relative;
     max-width: 1000px;
-    padding: 3rem;
+    padding: 2rem 3rem;
 
 }
 
@@ -401,18 +435,18 @@ h3 {
     text-align: start;
 }
 
-
+h2 {
+    text-align: center !important;
+}
 
 
 @media screen and (max-width: 1000px) {
     .title {
         width: fit-content;
         z-index: 99;
-
         margin: auto;
         position: relative;
         max-width: 800px;
-
         padding: 0rem 3rem;
 
     }
@@ -436,34 +470,8 @@ h3 {
         position: relative;
         /* max-width: 500px; */
 
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
     }
-
-    /* .titleh1 {
-        font-family: "華康古印體";
-        color: #000000;
-        text-align: left;
-        font-size: 2rem;
-        margin-bottom: -4px;
-
-    }
-
-    .titleh2 {
-        font-family: "華康古印體";
-        color: #000000;
-        text-align: left;
-        font-size: 1.6rem;
-        margin-bottom: -4px;
-
-    }
-
-
-    .titlep {
-        display: none;
-
-
-    }
- */
 
 
 }
@@ -471,7 +479,7 @@ h3 {
 
 
 
-/* titleend */
+
 .startbtn {
 
     padding: 0.5rem 1.2rem;
@@ -494,20 +502,16 @@ h3 {
 
 
 .ans__wrap {
-    height: 100%;
-    width: fit-content;
-    position: relative;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
 
 }
 
-.ans__wrap img {
-    margin-top: 30px;
-    height: 350px;
 
-}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     .ans__wrap img {
         display: none;
 
@@ -523,38 +527,17 @@ h3 {
     left: 620px;
 }
 
-img {
-    pointer-events: none;
-}
 
 
 .btn1 {
     width: 200px;
-    /* border-radius: 1px;
-    font-size: 20px;
-    position: absolute;
-    top: 11px;
-    background-color: #ffffff;
-    color: var(--main_color); */
+
     color: #333333;
 
 }
 
-.btn3 {
-    position: absolute;
-    bottom: 10rem;
-    background-color: #333333;
-    padding: 0.5rem 1rem;
-    left: 30.5rem;
-}
 
-/* 繼續閱讀btn */
 
-div p {
-    text-align: left;
-}
-
-.intro {}
 
 
 
@@ -657,18 +640,6 @@ textarea {
     margin: 0;
 }
 
-input {
-    overflow: visible;
-}
-
-button {
-    border: 1px none;
-}
-
-select {
-    text-transform: none;
-}
-
 
 
 
@@ -686,27 +657,9 @@ select {
     padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
 
 
 
-
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-}
-
-details {
-    display: block;
-}
-
-summary {
-    display: list-item;
-}
 
 template {
     display: none;
@@ -718,21 +671,6 @@ ul {
     padding: 0;
     margin-bottom: 0;
 }
-
-
-
-
-
-
-:focus {
-    outline: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
 
 
 
@@ -749,101 +687,8 @@ input {
 }
 
 
-.hide {
-    display: none !important;
-}
-
-.hide--hd {
-    display: none !important;
-}
-
-.hide--mb {
-    display: block !important;
-}
-
-.tac {
-    text-align: center;
-}
-
-.tal {
-    text-align: left;
-}
 
 
-
-
-.list--upperAlpha li {
-    list-style: upper-alpha;
-    position: relative;
-}
-
-.list--upperAlpha li:before {
-    content: "-";
-    position: absolute;
-    left: -28px;
-}
-
-.floatCols {
-    float: left;
-}
-
-.floatCols:last-of-type:before {
-    content: "";
-    clear: both;
-}
-
-
-.main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-.imageWrap {
-    width: 100%;
-}
-
-.imageWrap img {
-    margin: 0 auto;
-}
-
-.imageWrap--circle {
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-
-.mfp-iframe-scaler {
-    overflow: unset;
-}
-
-@media (min-width: 768px) {
-    .container--half {
-        max-width: 720px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container--half {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container--half {
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: 1440px) {
-
-
-    .container-xl {
-        max-width: 1365px;
-    }
-}
 
 @media only screen and (max-width: 1440px) {}
 
@@ -866,77 +711,14 @@ input {
         padding-left: 20px;
     }
 
-    .hide--hd {
-        display: block !important;
-    }
-
-    .hide--mb {
-        display: none !important;
-    }
-
-    .footer {
-        padding: 20px;
-    }
-}
-
-
-
-.navbar__brand {
-    width: 155px;
-    height: 44px;
-    background: url(../assets/bear.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.navbar__content {
-    right: 0;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-}
-
-
-#nav-show {
-    display: none;
-    width: 100vw;
-    height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar__list {
-        padding: 0 40px;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    .navbar__list {
-        padding: 0 30px;
-    }
-
-    .navbar__list .menu__title {
-        font-size: 1.625rem;
-    }
-}
-
-
-
-.city:before {
-    content: "";
-    display: block;
-    width: 400px;
-    height: 350px;
-    background-image: url(../assets/29-金魅.jpg);
-    background-size: cover;
-    background-repeat: repeat-x;
-    /* position: absolute; */
-    position: relative;
 
 }
+
+
+
+
+
+
 
 
 
@@ -951,8 +733,6 @@ input {
 
 
 
-.chBtn .game__desc span,
-.game__desc .chBtn,
 .game__desc .chBtn span {
     width: 100%;
     max-width: 300px;
@@ -969,37 +749,9 @@ input {
 }
 
 /* .game__wrap {
-    overflow: hidden;
-    height: 100vh;
+    padding: 3rem;
 } */
 
-@-webkit-keyframes man {
-    0% {
-        top: 0;
-    }
-
-    50% {
-        top: 10%;
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-@keyframes man {
-    0% {
-        top: 0;
-    }
-
-    50% {
-        top: 10%;
-    }
-
-    100% {
-        top: 0;
-    }
-}
 
 .game__quiz {
     display: none;
@@ -1013,70 +765,51 @@ input {
 .game__quiz .num {
     left: 30px;
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 500;
-    font-family: "華康愛情體W5", Roboto, "Microsoft JhengHei", Arial, sans-serif;
-    text-align: left;
+
+    padding: 1rem;
 }
 
 .game__quiz .num span {
     color: #fefefe;
-    font-size: 3.5rem;
-    font-family: "華康愛情體W5", Roboto, "Microsoft JhengHei", Arial, sans-serif;
+    font-size: 3rem;
+
     font-weight: 700;
-    text-align: start;
+    text-align: center;
 }
 
 .game__quiz .ques {
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     font-weight: 500;
-    text-align: start;
     left: 30px;
     font-family: "華康愛情體W5";
     color: white;
+    padding: 1rem;
+    margin: 0.5rem;
 }
 
 .game__quiz .ans {
     left: 30px;
-    font-size: 1.6875rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    margin: 10px 0;
-    text-align: left;
+
+    text-align: center;
     font-family: "華康愛情體W5";
 }
 
 .game__quiz .ans input {
-    width: 28px;
-    height: 28px;
-    background-color: #373737;
-    border: 1px solid #cacaca;
-    top: 10px;
-    margin-right: 18px;
-
-    font-family: "華康愛情體W5";
+    display: none;
 }
 
-.game__quiz .ans input:after {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgb(239, 239, 239);
-    position: absolute;
-
-
-    font-family: "華康愛情體W5";
-}
 
 label {
     font-family: "華康愛情體W5";
-    justify-content: start;
+    justify-content: center;
     padding-left: 2rem;
     background-color: #f3f3f3;
     margin-left: 1rem;
-    width: 500px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -1100,46 +833,8 @@ label:hover {
 .game__quiz .ans label {
     font-weight: 500;
     display: flex;
+    width: 400px;
 
-}
-
-.game__quiz .back {
-    background-color: transparent;
-    margin-top: 1.875rem;
-    left: 20px;
-}
-
-.game__quiz .back span {
-    font-size: 1.5625rem;
-    color: #ffffff;
-    font-weight: 500;
-    margin-left: 13px;
-    font-family: "華康愛情體W5";
-    justify-content: start;
-    text-align: start;
-}
-
-.game__quiz .back:before {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 20px;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.game__quiz.notEnter {
-    left: 100vw;
-}
-
-.game__quiz.enter {
-    left: 0;
-}
-
-.game__quiz.leave {
-    left: -100vw;
 }
 
 .result {
@@ -1152,328 +847,13 @@ label:hover {
 
 }
 
-.resultbtn {
-    max-width: 1050px;
-    margin: auto;
-    padding: 0px;
-
-}
-
-.result img {
-    width: 85%;
-    margin: auto;
-}
-
 .result__img {
     width: 1200px;
 }
 
-.result a {
-
-    padding: 1rem 1rem 2rem;
-}
-
-.resultbtn {
-    margin-top: -100px
-}
-
-.result .top {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.result .top:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 87%;
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    border: 6px solid #2544a1;
-    border-radius: 42px;
-    background-color: #fff;
-}
-
-.result .top__img {
-    width: 50%;
-    max-width: 530px;
-    left: -20px;
-}
-
-
-
-.result .top__desc {
-    text-align: center;
-    left: -20px;
-    top: 10px;
-}
-
-.result .top__desc p {
-    line-height: 1.3;
-}
-
-.result .talk {
-    position: absolute;
-    right: -160px;
-    top: -10%;
-    text-align: center;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.5625rem;
-    line-height: 1.5;
-    padding: 12px 24px;
-    background-color: #2544a1;
-    border-radius: 45px;
-    max-width: 400px;
-}
-
-.result .talk:before {
-    content: "";
-    display: block;
-    width: 33px;
-    height: 33px;
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -33px;
-    left: 50px;
-}
-
-.result .foreword {
-    font-size: 1.875rem;
-    color: #2544a1;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.result .character {
-    font-size: 2.9375rem;
-    font-weight: 400;
-}
-
-.result .quesD {
-    font-size: 6.25rem;
-    font-weight: 500;
-}
-
-.result .box {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    border-top: 3px solid #2544a1;
-    border-bottom: 3px solid #2544a1;
-    margin-bottom: 20px;
-}
-
-.result .box__title {
-    display: inline-block;
-    padding: 0 5px;
-    position: absolute;
-    left: 50%;
-    top: -20px;
-    background-color: #f9e46c;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.result .box__title .info {
-    font-size: 1.1875rem;
-    color: #f9e46c;
-    background-color: #2544a1;
-    border-radius: 20px;
-    font-weight: 500;
-    padding: 5px 35px;
-}
-
-.result .box p {
-    color: #2544a1;
-    font-weight: 500;
-}
-
-.result .middle {
-    color: #2544a1;
-    font-size: 1.875rem;
-    font-weight: 500;
-    text-align: center;
-    margin: 7.5rem 0;
-}
-
-.result .middle:after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 20px;
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    -webkit-transform: translateX(-50%) rotate(-90deg);
-    -ms-transform: translateX(-50%) rotate(-90deg);
-    transform: translateX(-50%) rotate(-90deg);
-    background-image: url(../assets/bear.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-
-
-
-@media only screen and (max-width: 1199px) {
-
-    .result .top__desc {
-        left: -50px;
-    }
-
-    .result .foreword {
-        font-size: 1.25rem;
-    }
-
-    .result .character {
-        font-size: 1.75rem;
-    }
-
-    .result .quesD {
-        font-size: 4.375rem;
-    }
-
-    .result .middle {
-        margin: 80px 0;
-    }
-}
-
-/* 
-@media only screen and (max-width: 992px) {
-    .game {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding: 60px 15px;
-    }
-
-    .game__man {
-        padding-right: 0;
-        max-width: 420px;
-    }
-
-    .game__desc {
-        top: 0;
-    }
-
-    .game__desc p {
-        margin: 20px;
-        text-align: center;
-    }
-
-    .game__desc .imageWrap {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .game__desc .chBtn span {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .game__quiz {
-        max-width: unset;
-        padding-top: 40px;
-    }
-
-    .result .talk {
-        font-size: 1.125rem;
-        right: 43%;
-        top: -16%;
-        width: 100%;
-        max-width: 293px;
-        padding: 12px 20px;
-        -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        transform: translateX(50%);
-    }
-
-    .result .talk:before {
-        left: 55%;
-    }
-
-    .result .top {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .result .top:before {
-        display: none;
-    }
-
-    .result .top__img {
-        width: 75%;
-        left: unset;
-    }
-
-    .result .top__desc {
-        width: 100%;
-        left: 0;
-    }
-
-    .result .foreword {
-        font-size: 1rem;
-    }
-
-    .result .character {
-        font-size: 1.5625rem;
-    }
-
-    .result .quesD {
-        font-size: 3.5625rem;
-    }
-
-    .result .middle {
-        margin: 10px 0;
-        font-size: 1rem;
-    }
-
-    .result__desc {
-        padding-top: 100px;
-    }
-
-    .result .box__title {
-        min-width: 60%;
-        text-align: center;
-    }
-
-    .result .box__title .info {
-        padding: 5px 20px;
-    }
-
-    .icon__social {
-        width: 35px;
-        height: 35px;
-    }
-
-    .icon__social--line {
-        background-position-x: -35px;
-    }
-} */
-
 @media only screen and (max-width: 768px) {
     .game__wrap {
-        min-height: 800px !important;
+        min-height: 700px !important;
     }
 
     .bg--main {
@@ -1489,8 +869,6 @@ label:hover {
         font-size: 1rem;
     }
 
-    .chBtn .game__desc span,
-    .game__desc .chBtn,
     .game__desc .chBtn span {
         font-size: 1rem;
         max-width: 200px;
@@ -1509,28 +887,30 @@ label:hover {
 
 
     .game__quiz .Q {
-        width: 500px;
+        width: 400px;
         margin: auto;
     }
 
 
     .game__quiz .num {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     .game__quiz .num span {
-        font-size: 2.375rem;
+        font-size: 3rem;
     }
 
     .game__quiz .ques {
-        font-size: 1.75rem;
+        font-size: 2.3rem;
         word-break: unset;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        line-height: 3rem;
     }
 
     .game__quiz .ans {
         font-size: 1.125rem;
         margin: 0;
+        text-align: center;
     }
 
     .game__quiz .ans input {
@@ -1545,6 +925,12 @@ label:hover {
         left: 0;
     }
 
+    .game__quiz .back {
+        background: transparent;
+        border: none;
+        font: 18px;
+    }
+
     .game__quiz .back span {
         font-size: 1rem;
         margin-left: 8px;
@@ -1556,18 +942,11 @@ label:hover {
     }
 
     .result {
-        padding: 100px 50px;
+        padding: 1rem;
     }
 
-    .result .talk {
-        right: 40%;
-        top: -20%;
-    }
 
-    .result .box__title .info {
-        font-size: 1rem;
-        padding: 5px 10px;
-    }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -1575,21 +954,18 @@ label:hover {
         width: 100%;
     }
 
-    .result .top__img .imageWrap {
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-        -webkit-filter: drop-shadow(3px 3px 0 rgba(250, 184, 74, 0.7));
-        filter: drop-shadow(3px 3px 0 rgba(250, 184, 74, 0.7));
+    .ans__wrap {
+        display: flex;
+        width: 300px;
+        margin: auto;
+
+
     }
 
-    .result .talk {
-        right: 44%;
-        top: -25%;
-    }
 
     .game__wrap {
         min-height: 800px !important;
+        padding: 1rem;
     }
 
     .bg--main {
@@ -1605,19 +981,6 @@ label:hover {
         font-size: 1rem;
     }
 
-    .chBtn .game__desc span,
-    .game__desc .chBtn,
-    .game__desc .chBtn span {
-        font-size: 1rem;
-        max-width: 200px;
-    }
-
-    .game__desc .arrow__right--main {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        top: 1px;
-    }
 
     .game__quiz {
         width: 100%;
@@ -1625,7 +988,7 @@ label:hover {
 
 
     .game__quiz .Q {
-        width: 350px;
+        width: 300px;
         margin: auto;
     }
 
@@ -1641,13 +1004,14 @@ label:hover {
     .game__quiz .ques {
         font-size: 1.75rem;
         word-break: unset;
+        line-height: 2.2rem;
 
 
     }
 
     .game__quiz .ans {
         font-size: 1.125rem;
-        margin: 0;
+
     }
 
     .game__quiz .ans input {
@@ -1667,6 +1031,11 @@ label:hover {
         margin-left: 8px;
     }
 
+    .result__img {
+        width: 100%;
+        padding: 1rem;
+    }
+
     .game__quiz .back:before {
         width: 9px;
         height: 14px;
@@ -1676,7 +1045,7 @@ label:hover {
     .game__quiz .ans label {
         font-weight: 500;
         display: flex;
-        width: 350px;
+        width: 300px;
 
         margin: auto;
         margin: 1.8rem auto;
@@ -1684,74 +1053,6 @@ label:hover {
     }
 
 }
-
-.chBtn,
-.chBtn span {
-    text-align: center;
-    padding: 5px 30px;
-    border-radius: 30px;
-    display: inline-block;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.chBtn span {
-    display: block;
-    position: absolute;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    left: -1px;
-    top: -1px;
-    -webkit-clip-path: inset(0 100% 0 0);
-    clip-path: inset(0 100% 0 0);
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.chBtn--main {
-    background-color: #f9e46c;
-    color: #2544a1;
-}
-
-.chBtn--main span {
-    background-color: #2544a1;
-    color: #f9e46c;
-}
-
-.chBtn--main:hover span {
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
-}
-
-.chBtn--line {
-    background-color: transparent;
-    color: #2544a1;
-    border: 1px solid #2544a1;
-}
-
-.chBtn--line span {
-    background-color: #2544a1;
-    color: #fff;
-}
-
-.chBtn--line:hover {
-    color: #2544a1;
-}
-
-
-
-.arrow__right {
-    width: 0;
-    height: 0;
-    display: inline-block;
-    border-right: 0 solid transparent;
-    border-top: 6.5px solid transparent;
-    border-bottom: 6.5px solid transparent;
-    margin-left: 12px;
-}
-
 
 
 .bg--main {
@@ -1765,283 +1066,31 @@ label:hover {
 }
 
 
-@media screen and (max-width:500px) {
-
-    .bg--main {
-        background-image: url("../assets/banner2.jpg");
-        background-size: cover;
-    }
-
-
-}
-
-
-
-.slider--title {
-    margin-top: 20px;
-}
-
-.slider--title.arrow--main:before,
-.slider--title.arrow--sub:before {
-    content: "";
-    display: inline-block;
-    width: 9px;
-    height: 18px;
-    background-image: url(../assets/bear.jpg);
-    background-repeat: no-repeat;
-    background-size: 18px 14px;
-    margin-right: 5px;
-}
-
-.slider--title.arrow--main:before {
-    background-position-x: 0;
-}
-
-.slider--title.arrow--sub:before {
-    background-position-x: -10px;
-}
-
-.slider--subTitle {
-    font-size: 1.125rem;
-    line-height: 1.4;
-    width: 75%;
-}
-
-.slider--article {
-    margin-right: -3.125rem;
-    margin-left: -3.125rem;
-}
-
-.slider .item {
-    padding: 0 3.125rem;
-    margin-bottom: 3.125rem;
-}
-
-.slider .arrow__square {
-    width: 35px;
-    height: 35px;
-    background-color: #2544a1;
-    top: 33%;
-    position: absolute;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.slider .arrow__square:after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url(../assets/bear.jpg);
-    top: 5px;
-    width: 400px;
-    height: 400px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.slider .arrow__square--left {
-    left: 10px;
-}
-
-.slider .arrow__square--left:after {
-    left: 8px;
-}
-
-.slider .arrow__square--right {
-    right: 10px;
-}
-
-.slider .arrow__square--right:after {
-    left: 12px;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-
-.half__item {
-    padding: 0 1.25rem;
-}
-
-.half__item .imageWrap {
-    border-radius: 17px;
-    overflow: hidden;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-
-
-
-
-.chart__title {
-    text-align: center;
-    margin-bottom: 1.25rem;
-}
-
-.chart__desc {
-    margin-bottom: 3.125rem;
-}
-
-.chart__img {
-    margin-bottom: 7.5rem;
-}
-
-.chart__note {
-    display: block;
-    font-size: 0.9375rem;
-    color: #959595;
-    margin-top: 10px;
-}
-
-
-
-
-
-
-
-.bgLink .fire:before {
-    -o-transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.bgLink:hover .fire:before {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.container--half .row {
-    margin-left: -35px;
-    margin-right: -35px;
-}
-
-
-@media only screen and (max-width: 1440px) {
-    .section__title {
-        margin-bottom: 40px;
-    }
-
-    .slider--article {
-        margin-right: -30px;
-        margin-left: -30px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .slider .item {
-        padding: 0 1.875rem;
-        margin-bottom: 2.5rem;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .slider--article {
-        margin-right: -20px;
-        margin-left: -20px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .slider .item {
-        padding: 20px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .bg--half:before {
-        height: 100%;
-    }
-
-    .bg--half .section__title {
-        margin-bottom: 2.5rem;
-    }
-
-    .section__container {
-        padding-top: 3.75rem;
-        padding-bottom: 3.75rem;
-    }
-
-    .container--half {
-        padding-bottom: 10px;
-    }
-
-    .container--half .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .half__wrap {
-        padding: 3.125rem 3.75rem 3.125rem;
-        background-color: #f9e46c;
-    }
-
-    .half__wrap:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 60%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: #f3f3f3;
-    }
-
-    .half__item {
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-    }
-
-    .slider--article {
-        margin-right: -20px;
-        margin-left: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .slider--title {
-        font-size: 1.5625rem;
-    }
-
-    .slider .item {
-        padding: 0;
-        margin-bottom: 30px;
-    }
-
-    .slider .arrow__square {
-        top: 25%;
-    }
-
-    .slider .arrow__square--left {
-        left: 20px;
-    }
-
-    .slider .arrow__square--right {
-        right: 20px;
-    }
-
-    .backtop {
-        right: 10px;
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media only screen and (max-width: 414px) {
-    .half__item {
-        max-width: unset;
-    }
-}
-
-.row {}
 
 .back {
     color: white;
+}
+
+.img__wrap {
+    width: 300px;
+    height: 300px;
+    padding: 1rem;
+    margin: auto 1rem;
+}
+
+.game__quiz .back {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.game__quiz {
+    padding: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .game__quiz {
+        padding: 0rem;
+    }
 }
 </style>

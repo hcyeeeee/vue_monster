@@ -1,17 +1,19 @@
 <template>
-    <div class="text">
-        <p>文字內容｜廖婉馨、詹雅涵<br>
-            視覺設計｜蔡詠全<br>
-            網頁設計｜黃莘懿<br>
-            特別感謝｜台北地方異聞工作室<br>
-            &emsp;&emsp;&emsp;&emsp;｜奇異果文創<br>
-            &emsp;&emsp;&emsp;&emsp;｜晨星出版社
+    <div class="layout">
+
+        <div class="text">
+            <p>文字內容｜廖婉馨、詹雅涵<br>
+                視覺設計｜蔡詠全<br>
+                網頁設計｜黃莘懿<br>
+                特別感謝｜台北地方異聞工作室<br>
+                &emsp;&emsp;&emsp;&emsp;｜奇異果文創<br>
+                &emsp;&emsp;&emsp;&emsp;｜晨星出版社
 
 
-        </p>
-
-
+            </p>
+        </div>
     </div>
+
 
 </template>
 
@@ -38,8 +40,11 @@ export default {
 }
 
 .text {
+    text-align: left;
+    margin: auto;
     display: flex;
     justify-content: center;
+
 }
 
 
@@ -53,5 +58,20 @@ export default {
 
 .logo {
     height: 0px;
+}
+
+p {
+    text-align: left;
+}
+
+.layout {}
+
+.layout {
+    background-image: black;
+    background-size: cover;
+
+
+
+
 }
 </style>

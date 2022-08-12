@@ -38,10 +38,70 @@ export default {
         Addition,
         Footer,
     },
+    mounted() {
+        let lazyImg = document.querySelectorAll('img')
+        lazyImg.forEach(img => {
+            img.setAttribute('loading', 'lazy')
+        })
+    },
 }
 </script>
 
 <style>
+/* @font-face {
+    font-family: "test1";
+    src: url(../src/fontstyle/font1.ttf) format("opentype");
+}
+
+
+@font-face {
+    font-family: test1;
+    src: url('https://www.ftvnews.com.tw/topics/taiwanghost/fonts/font1.ttf');
+    /* src: url('../src/fontstyle/font1.ttf'); */
+
+
+@font-face {
+    font-family: test1;
+    src: url('http://fonts.googleapis.com/css?family=Noto+Serif+TC');
+    /* src: url('../src/fontstyle/font1.ttf'); */
+
+}
+
+*/ p {
+    font-family: test1 !important;
+    line-height: 100px;
+}
+
+div {
+    font-family: test1 !important;
+    line-height: 100px;
+}
+
+label {
+    font-family: test1 !important;
+}
+
+a {
+    font-family: test1 !important;
+}
+
+span {
+    font-family: test1 !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
 html {}
 
 body {}
@@ -170,7 +230,8 @@ i {
 }
 
 body {
-    line-height: 1;
+
+    line-height: 1.3rem;
 }
 
 ol,
@@ -213,30 +274,45 @@ table {
 }
 
 p {
-    font-size: 1.1rem !important;
+    font-family: test1 !important;
+    font-size: 1.3rem !important;
+    line-height: 2rem;
 }
 
 h1 {
+    font-family: test1 !important;
+
     font-size: 4rem !important;
+    line-height: 5.2rem;
 }
 
 h2 {
+    font-family: test1 !important;
     font-size: 3.6rem !important;
+    
+    text-align: center;
+    line-height: 4rem;
 }
 
 h3 {
+    font-family: test1 !important;
+    font-weight: 600;
     font-size: 3rem !important;
     padding: 1rem 0;
+    line-height: 3.6rem;
 
 }
 
-h4 {}
+h4 {
+    font-family: test1 !important;
+    line-height: 2rem;
+}
 
 
 @media screen and (max-width: 768px) {
 
     p {
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
 
     h1 {
@@ -259,22 +335,31 @@ h4 {}
 @media screen and (max-width: 600px) {
 
     p {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
+        line-height: 1.7rem;
     }
 
     h1 {
-        font-size: 3.2rem !important;
+        font-size: 3.8rem !important;
+
+        line-height: 3rem;
+
     }
 
     h2 {
         font-size: 3rem !important;
+        line-height: 3.4rem;
+
     }
 
     h3 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
+        line-height: 2.2rem;
     }
 
-    h4 {}
+    h4 {
+        line-height: 1.7rem;
+    }
 }
 
 
