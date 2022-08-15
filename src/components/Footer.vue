@@ -30,12 +30,11 @@ export default {
 
 <style scoped>
 * {
-    font-family: '華康愛情體W5', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
     background-color: black;
     color: white;
     padding: 1rem;
     line-height: 2.5rem;
-    font-weight: 800;
     font-size: 1.5rem;
 }
 

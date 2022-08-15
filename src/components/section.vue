@@ -117,9 +117,9 @@
 
         <img class="role col-5 p-3" src="../assets/37-林投姐.jpg" alt="林投姐">
         <div class=" col-7 content p-3 ">
-          <h3>林投姐</h3>
+          <h4>林投姐</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>講到台灣女鬼，許多人會想到清代府城三大奇案之一的「林投姐」。<br>
@@ -129,11 +129,11 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row ">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 台南火車站</div>
           </div>
           <div class="row">
@@ -161,9 +161,9 @@
           <img class="role" src="../assets/37-林投姐.jpg" alt="林投姐">
         </div>
         <div class=" col-12 content">
-          <h3>林投姐</h3>
+          <h4>林投姐</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">講到台灣女鬼，許多人會想到清代府城三大奇案之一的「林投姐」。<br>
@@ -173,12 +173,12 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
 
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row">
-            <h4>尋妖之旅</h4>
+            <h5>尋妖之旅</h5>
 
           </div>
           <div class="row ">
@@ -207,9 +207,9 @@
 
         <img class="role col-5 p-3" src="../assets/45-陳守娘.jpg" alt="陳守娘">
         <div class="col-7 content p-3">
-          <h3>陳守娘</h3>
+          <h4>陳守娘</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>
@@ -218,11 +218,11 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row ">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 台南孔廟、辜婦媽廟</div>
           </div>
           <div class="row">
@@ -251,9 +251,9 @@
           <img class="role" src="../assets/45-陳守娘.jpg" alt="陳守娘">
         </div>
         <div class=" col-12 content">
-          <h3>陳守娘</h3>
+          <h4>陳守娘</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">
@@ -262,12 +262,12 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
 
             <div class="col-6 text"> 台南</div>
           </div>
           <div class="row">
-            <h4>尋妖之旅</h4>
+            <h5>尋妖之旅</h5>
           </div>
           <div class="row ">
             <p class="col-12">一、台南孔廟<br>
@@ -298,10 +298,10 @@
       <!-- computer version -->
       <div class="row computer ">
         <img class="row role col-5 p-3 " src="../assets/29-金魅.jpg" alt="金魅">
-        <div class="row col-7 content">
-          <h3>金魅</h3>
+        <div class="row col-7 p-3 content">
+          <h4>金魅</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>
@@ -310,11 +310,11 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 旅館</div>
           </div>
           <div class="row ">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 無</div>
           </div>
         </div>
@@ -330,10 +330,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/29-金魅.jpg" alt="金魅">
         </div>
-        <div class=" col-12 content">
-          <h3>金魅</h3>
+        <div class=" col-12  content">
+          <h4>金魅</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">
@@ -342,12 +342,12 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 旅館</div>
           </div>
 
           <div class="row   4">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 無</div>
           </div>
         </div>
@@ -359,11 +359,11 @@
       <!-- computer version -->
       <div class="row computer">
 
-        <img class="role col-5" src="../assets/魔神仔.jpg" alt="魔神仔">
-        <div class="col-7 content">
-          <h3>魔神仔</h3>
+        <img class="role col-5 p-3" src="../assets/魔神仔.jpg" alt="魔神仔">
+        <div class="col-7 p-3 content">
+          <h4>魔神仔</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>
@@ -377,11 +377,11 @@
 
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 台北、新北山區</div>
           </div>
           <div class="row ">
-            <h4>尋妖之旅</h4>
+            <h5>尋妖之旅</h5>
           </div>
           <div class="row    2">
             <p class="col-12">一、南港魔神仔硿<br>
@@ -408,10 +408,10 @@
         <div class="row col-12">
           <img class="role" src="../assets/魔神仔.jpg" alt="魔神仔">
         </div>
-        <div class="col-12 content">
-          <h3>魔神仔</h3>
+        <div class="col-12   content">
+          <h4>魔神仔</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">
@@ -422,12 +422,12 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
 
             <div class="col-6 text"> 台北、新北山區</div>
           </div>
           <div class="row">
-            <h4>尋妖之旅</h4>
+            <h5>尋妖之旅</h5>
           </div>
           <div class="row    5">
             <p class="col-12">一、南港魔神仔硿<br>
@@ -454,11 +454,11 @@
         <div v-show="modal_1" v-on:click="modal_1 = !modal_1">
 
         </div>
-        <img class="role col-5    5   5" src="../assets/貓將軍.jpg" alt="貓將軍">
-        <div class="col-7 content">
-          <h3>貓將軍</h3>
+        <img class="role col-5 p-3" src="../assets/貓將軍.jpg" alt="貓將軍">
+        <div class="col-7 p-3 content">
+          <h4>貓將軍</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>宜蘭頭城當地有個詭譎傳說，相傳1875年左右，有隻山貓妖怪在福德坑一帶作亂，到處殺害家畜、散佈疾病，村民們儘管四處求神問佛，也無法解決，相當困擾。
@@ -467,11 +467,11 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 宜蘭頭城</div>
           </div>
           <div class="row ">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 將軍廟</div>
 
           </div>
@@ -498,9 +498,9 @@
           <img class="role" src="../assets/貓將軍.jpg" alt="貓將軍">
         </div>
         <div class="col-12 content">
-          <h3>貓將軍</h3>
+          <h4>貓將軍</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">宜蘭頭城當地有個詭譎傳說，相傳1875年左右，有隻山貓妖怪在福德坑一帶作亂，到處殺害家畜、散佈疾病，村民們儘管四處求神問佛，也無法解決，相當困擾。
@@ -509,12 +509,12 @@
             </p>
           </div>
           <div class="row  ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
 
             <div class="col-6 text">宜蘭頭城</div>
           </div>
           <div class="row">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 將軍廟</div>
           </div>
           <div class="row ">
@@ -537,9 +537,9 @@
 
         <img class="role col-5 p-3" src="../assets/01-日月潭白鹿.jpg" alt="日月潭白鹿">
         <div class="row col-7 content p-3">
-          <h3>白鹿</h3>
+          <h4>白鹿</h4>
           <div class="row col-6">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p>
@@ -548,12 +548,12 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 南投日月潭</div>
           </div>
           <div class="row ">
 
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
             <div class="col-6 text"> 士亭仔步道、拉魯島</div>
           </div>
           <div class="row ">
@@ -584,9 +584,9 @@
           <img class="role" src="../assets/01-日月潭白鹿.jpg" alt="日月潭白鹿">
         </div>
         <div class="col-12 content">
-          <h3>白鹿</h3>
+          <h4>白鹿</h4>
           <div class="row col-12">
-            <h4>起源小故事</h4>
+            <h5>起源小故事</h5>
           </div>
           <div class="row">
             <p class="col-12">
@@ -596,11 +596,11 @@
             </p>
           </div>
           <div class="row ">
-            <h4 class="col-6">出沒地區</h4>
+            <h5 class="col-6">出沒地區</h5>
             <div class="col-6 text"> 南投日月潭</div>
           </div>
           <div class="row">
-            <h4 class="col-6">尋妖之旅</h4>
+            <h5 class="col-6">尋妖之旅</h5>
 
           </div>
           <div class="row ">
@@ -670,11 +670,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  font-family: '華康愛情體W5';
-}
-
-
 .chen {
   height: 250px;
 }
@@ -685,7 +680,14 @@ export default {
   display: none;
 }
 
-.fa-plus{display: block;}
+.fa-plus {
+  display: block;
+  margin-top: 1.3rem;
+
+
+
+}
+
 .travel {}
 
 .travel {
@@ -695,15 +697,14 @@ export default {
 .role {
   height: 100%;
   margin: auto;
-  padding: 2.5rem 1rem 0.5rem 1rem;
-
+  margin-top: 1rem
 }
 
 .role2 {
   height: 100%;
   margin: auto;
   /* margin-left: 1.5rem; */
-  margin-top: 2rem;
+
 }
 
 
@@ -742,9 +743,7 @@ export default {
   /* background-image: url('../assets/妖怪網頁_computer\ banner.jpg'); */
 }
 
-div {
-  font-family: 黑體;
-}
+
 
 picture {
   max-width: 1000px;
@@ -858,14 +857,10 @@ button {
 .timeline {
   white-space: nowrap;
   overflow-x: scroll;
-
   height: 100%;
   margin-top: -5.5rem;
-  font-family: 'font1';
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
   scrollbar-width: none;
-  /* Firefox */
 }
 
 
@@ -973,19 +968,17 @@ button {
 .timeline time {
   display: block;
   font-size: 1.6rem;
-  font-weight: bold;
   margin-bottom: 8px;
-
 }
 
 
 
-h4 {
+h5 {
   color: white;
   background: #333333;
   padding: 0.5rem 1rem;
   width: fit-content;
-  margin: 5px;
+  margin: 0.5rem 0rem;
   height: fit-content;
   font-size: 1.4rem;
 }
@@ -994,7 +987,7 @@ h4 {
   font-size: 28px;
   padding: 0.5rem;
   width: fit-content;
-  font-family: '華康愛情體w5';
+
 }
 
 .mobile {
@@ -1010,7 +1003,7 @@ h4 {
 
   }
 
-  h4 {
+  h5 {
     color: white;
     background: #333333;
     padding: 0.5rem 1rem;
@@ -1131,7 +1124,6 @@ h4 {
   color: #333;
   top: 2.5rem;
   padding: 1px;
-  font-weight: bold;
   text-align: right;
   padding: 0;
   transform: rotate(45deg);
@@ -1191,7 +1183,6 @@ h4 {
     color: #333;
     top: 1.5rem;
     padding: 1px;
-    font-weight: bold;
     text-align: right;
     padding: 0;
     transform: rotate(45deg);
@@ -1309,9 +1300,7 @@ h4 {
     margin: auto;
     width: fit-content;
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 8px;
-
   }
 
   .layout {
@@ -1347,9 +1336,10 @@ h2 {
 }
 
 
-h3 {
+h4 {
   text-align: left;
   font-size: 3rem !important;
+  margin-bottom: 1rem;
 }
 </style>
  

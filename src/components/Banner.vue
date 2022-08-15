@@ -13,10 +13,7 @@
 </template>
 
 <style scoped>
-* {
-    font-family: "華康愛情體W5";
 
-}
 
 .bg--main {
     background-image: url('../assets/banner1.jpg');

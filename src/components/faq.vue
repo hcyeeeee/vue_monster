@@ -218,7 +218,7 @@ export default {
     width: 100%;
     height: 100%;
     color: white;
-    font-family: '華康愛情體W5';
+
 }
 
 .layout_grid {

@@ -249,10 +249,10 @@ export default {
       $(".game__wrap").removeClass("bg--main");
       $(".game__wrap").addClass("bg--main2");
 
-      console.log(this.q_no); // 0
+    //   console.log(this.q_no); // 0
       $(".ans__wrap").eq(this.q_no).fadeIn();
 
-      console.log("當前第幾題：", this.q_no + 1);
+    //   console.log("當前第幾題：", this.q_no + 1);
     },
 
     next() {
@@ -260,7 +260,7 @@ export default {
         this.print();
       } else {
         this.q_no++;
-        console.log("當前第幾題：", this.q_no + 1);
+        // console.log("當前第幾題：", this.q_no + 1);
       }
 
       $(".ans__wrap")
@@ -271,7 +271,7 @@ export default {
 
     back() {
       this.q_no--; //0
-      console.log("當前第幾題：", this.q_no + 1);
+    //   console.log("當前第幾題：", this.q_no + 1);
       $(".ans__wrap")
         .eq(this.q_no + 1)
         .hide();
@@ -321,7 +321,6 @@ if(W > 768){
 
     getLocalUrl() {
       let e = document.createElement("input"),
-        // t = window.location.href + '?utm_source=topicpage&utm_medium=copybutton'
         t = window.location.href;
       document.body.appendChild(e),
         (e.value = t),
@@ -330,23 +329,18 @@ if(W > 768){
         document.body.removeChild(e),
         alert("網址複製成功!");
     },
-    // delimiters: ['{{','}}']
+   
   },
 };
 </script>
 <style scoped>
-* {
-    font-family: "font1";
+#sum {
+    color: transparent;
 }
-
-
-
 
 .btn__result {
     display: flex;
-
     justify-content: space-between;
-
     margin: auto;
     padding: 1rem 1rem 5rem 1rem;
     font-size: 1.5rem;
@@ -378,24 +372,19 @@ if(W > 768){
     .btn__result>a {
         width: fit-content;
         padding: 0.5rem 3rem;
-
         color: #333333;
         text-decoration: none;
         margin: auto;
         margin-top: 2rem;
         width: 300px;
-        background-color: rgb(234, 225, 54);
 
     }
 }
 
-
 .layout {
     width: 100%;
     min-height: 200px;
-
 }
-
 
 .Q {
     display: block;
@@ -538,11 +527,6 @@ h2 {
 
 
 
-
-
-
-
-
 .btn2 {
     width: 200px;
     padding: 0.3rem 0.8rem;
@@ -559,19 +543,6 @@ h2 {
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500|Noto+Sans:wght@700|Roboto:400,700&display=swap);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-
-
-html {
-    padding: 0 !important;
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-
 section {
     display: block;
 }
@@ -579,12 +550,7 @@ section {
 body {
     margin: 0;
     padding: 0 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, "Noto Sans TC", "PingFang TC", "Helvetica Neue",
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
     font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
@@ -593,23 +559,6 @@ body {
 
 main {
     display: block;
-}
-
-
-
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
-
-strong {
-    font-weight: bolder;
-}
-
-
-samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
 }
 
 
@@ -634,7 +583,6 @@ img {
 
 
 textarea {
-    font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
@@ -683,7 +631,6 @@ li {
 
 input {
     outline: 0;
-    font-weight: 300;
 }
 
 
@@ -766,25 +713,19 @@ input {
     left: 30px;
     color: #ffffff;
     font-size: 3rem;
-    font-weight: 500;
-
     padding: 1rem;
 }
 
 .game__quiz .num span {
     color: #fefefe;
     font-size: 3rem;
-
-    font-weight: 700;
     text-align: center;
 }
 
 .game__quiz .ques {
     width: 100%;
     font-size: 2.6rem;
-    font-weight: 500;
     left: 30px;
-    font-family: "華康愛情體W5";
     color: white;
     padding: 1rem;
     margin: 0.5rem;
@@ -793,10 +734,8 @@ input {
 .game__quiz .ans {
     left: 30px;
     font-size: 1.2rem;
-    font-weight: 500;
 
     text-align: center;
-    font-family: "華康愛情體W5";
 }
 
 .game__quiz .ans input {
@@ -805,7 +744,6 @@ input {
 
 
 label {
-    font-family: "華康愛情體W5";
     justify-content: center;
     padding-left: 2rem;
     background-color: #f3f3f3;
@@ -827,11 +765,10 @@ label:hover {
 
 .game__quiz .ans input:checked:after {
     background-color: transparent;
-    font-family: "華康愛情體W5";
+
 }
 
 .game__quiz .ans label {
-    font-weight: 500;
     display: flex;
     width: 400px;
 
@@ -1043,10 +980,8 @@ label:hover {
     }
 
     .game__quiz .ans label {
-        font-weight: 500;
         display: flex;
         width: 300px;
-
         margin: auto;
         margin: 1.8rem auto;
 
@@ -1064,7 +999,6 @@ label:hover {
     background-image: url("../assets/banner1.jpg");
     background-size: cover;
 }
-
 
 
 .back {

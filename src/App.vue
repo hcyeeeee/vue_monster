@@ -24,6 +24,7 @@ import News from '@/components/News.vue'
 import Addition from '@/components/Addition.vue'
 import Footer from '@/components/Footer.vue'
 
+// 'Noto Sans TC','Helvetica Neue',Roboto,'Microsoft JhengHei',Arial,sans-serif
 
 export default {
     name: 'App',
@@ -48,46 +49,8 @@ export default {
 </script>
 
 <style>
-/* @font-face {
-    font-family: "test1";
-    src: url(../src/fontstyle/font1.ttf) format("opentype");
-}
-
-
-@font-face {
-    font-family: test1;
-    src: url('https://www.ftvnews.com.tw/topics/taiwanghost/fonts/font1.ttf');
-    /* src: url('../src/fontstyle/font1.ttf'); */
-
-
-@font-face {
-    font-family: test1;
-    src: url('http://fonts.googleapis.com/css?family=Noto+Serif+TC');
-    /* src: url('../src/fontstyle/font1.ttf'); */
-
-}
-
-*/ p {
-    font-family: test1 !important;
-    line-height: 100px;
-}
-
-div {
-    font-family: test1 !important;
-    line-height: 100px;
-}
-
-label {
-    font-family: test1 !important;
-}
-
-a {
-    font-family: test1 !important;
-}
-
-span {
-    font-family: test1 !important;
-}
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:wght@100;300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap');
 
 
 ::-webkit-scrollbar {
@@ -260,7 +223,8 @@ table {
 
 
 #app {
-    font-family: 華康古印體, '華康愛情體W5', 華康仿宋體, 宋體, 蘋果儷中黑, 華康粗黑體, 微軟正黑體, Avenir, Helvetica, Arial, sans-serif;
+    /* font-family: 華康古印體, '華康愛情體W5', 華康仿宋體, 宋體, 蘋果儷中黑, 華康粗黑體, 微軟正黑體, Avenir, Helvetica, Arial, sans-serif; */
+    font-family: 'Noto Sans TC', 'Noto Serif TC', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -269,43 +233,45 @@ table {
 }
 
 * {
-
     scroll-behavior: smooth;
 }
 
 p {
-    font-family: test1 !important;
     font-size: 1.3rem !important;
     line-height: 2rem;
+    font-family: 'Noto Sans TC';
 }
 
 h1 {
-    font-family: test1 !important;
-
-    font-size: 4rem !important;
+    font-size: 5rem !important;
     line-height: 5.2rem;
+
+    font-weight: 700 !important;
+    font-family: 'Noto Serif TC';
 }
 
 h2 {
-    font-family: test1 !important;
+
     font-size: 3.6rem !important;
-    
     text-align: center;
     line-height: 4rem;
+    font-weight: 700 !important;
+    font-family: 'Noto Serif TC';
 }
 
 h3 {
-    font-family: test1 !important;
-    font-weight: 600;
     font-size: 3rem !important;
     padding: 1rem 0;
     line-height: 3.6rem;
+    font-weight: 600 !important;
+    font-family: 'Noto Serif TC';
 
 }
 
 h4 {
-    font-family: test1 !important;
     line-height: 2rem;
+
+    font-family: 'Noto Sans TC';
 }
 
 

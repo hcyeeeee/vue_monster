@@ -7,9 +7,9 @@
         </div>
     </div>
 </template>
-<script>
-console.log();
-</script>
+
+
+
 
 <style scoped>
 .layout_header {
